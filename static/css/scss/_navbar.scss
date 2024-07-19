@@ -6,6 +6,8 @@
     background-color: $primary-redmode;
     border-radius: 15px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px $primary-redmode,
+                0 0 25px $primary-redmode;
 
     &:hover {
         background-color: $secondary-redmode;

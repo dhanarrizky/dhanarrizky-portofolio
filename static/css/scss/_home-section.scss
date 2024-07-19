@@ -1,0 +1,78 @@
+.home {
+    // background-color: aliceblue;
+    height: 80vh;
+    color: white;
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10%;
+        gap: 10%;
+        height: 100%;
+
+        .left-content img {
+            object-fit: cover;
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            transform: rotate(90deg);
+            box-shadow: 10px 0 15px  $primary-redmode;
+        }
+
+        .right-content {
+            &--top {
+                p {
+                    font-size: 12px;
+                }
+
+                .name {
+                    color: $primary-redmode;
+                    font-size: 40px;
+                }
+
+                h1 span {
+                    color: $secondary-bluemode;
+                }
+            }
+
+            &--middle {
+                margin-top: 30px;
+            }
+
+            &--bottom {
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+                gap: 20px;
+                
+                .brand a {
+                    font-size: 60px;
+                    margin: 0 20px ;
+                    text-decoration: none;
+                    color: $primary-redmode;
+                }
+
+                .download-btn {
+                    text-decoration: none;
+                    background-color: $primary-redmode;
+                    color: white;
+                    font-size: 25px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0px 50px;
+                    border-radius: 25px;
+                    height: 70px;
+                }
+            }
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
+    }
+}

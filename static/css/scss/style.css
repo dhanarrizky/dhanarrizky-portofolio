@@ -14,6 +14,7 @@ header .side-bar .btn-contact-me, header nav .right-nav .btn-contact-me {
   background-color: #FF0000;
   border-radius: 15px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 header .side-bar .btn-contact-me:hover, header nav .right-nav .btn-contact-me:hover {
   background-color: #FF6C6C;
@@ -158,4 +159,74 @@ header .side-bar .btn-contact-me {
 header .side-bar.active {
   right: 0;
   transition: right 1s ease;
+}
+
+main .container {
+  margin: 130px 30px 0px 30px;
+}
+main .container .home {
+  height: 80vh;
+  color: white;
+}
+main .container .home__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10%;
+  gap: 10%;
+  height: 100%;
+}
+main .container .home__container .left-content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  box-shadow: 10px 0 15px #FF0000;
+}
+main .container .home__container .right-content--top p {
+  font-size: 12px;
+}
+main .container .home__container .right-content--top .name {
+  color: #FF0000;
+  font-size: 40px;
+}
+main .container .home__container .right-content--top h1 span {
+  color: #0094FF;
+}
+main .container .home__container .right-content--middle {
+  margin-top: 30px;
+}
+main .container .home__container .right-content--bottom {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+main .container .home__container .right-content--bottom .brand a {
+  font-size: 60px;
+  margin: 0 20px;
+  text-decoration: none;
+  color: #FF0000;
+}
+main .container .home__container .right-content--bottom .download-btn {
+  text-decoration: none;
+  background-color: #FF0000;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px;
+  border-radius: 25px;
+  height: 70px;
+}
+@media screen and (max-width: 1224px) {
+  main .container .home__container {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */
