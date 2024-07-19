@@ -58,29 +58,36 @@ header {
                 transition: gap 0.3s ease;
         
                 li {
-                    width: 100px;
+                    width: 120px;
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     transition: width 0.3s ease;
         
-                    &.active a {
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        margin-top: 10px;
-                        position: absolute;
-                        display: flex;
-                        justify-content: center;
-                        background-color: $primary-redmode;
-                        width: 100%;
-                        padding: 10px 20px;
+                    &.active {
+                        background-color: black;
                         border-radius: 25px;
-                        border: 10px solid black;
-                        font-weight: bold;
-                        color: white;
-                        transition: background-color 0.3s ease, padding 0.3s ease, margin-top 0.3s ease;
+                        margin-top: 90px;
+                        height: 50px;
+
+                        a {
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            margin-top: 10px;
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            background-color: $primary-redmode;
+                            width: 85%;
+                            padding: 10px 5px;
+                            border-radius: 25px;
+                            font-weight: bold;
+                            color: white;
+                            transition: background-color 0.3s ease, padding 0.3s ease, margin-top 0.3s ease;
+                        }
                     }
                 }
             }
@@ -130,17 +137,30 @@ header {
             li {
                 position: relative;
                 transition: background-color 0.3s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
     
-                &.active a {
-                    margin-right: 80px;
-                    padding: 10px 20px;
+                &.active {
+                    background-color: black;
+                    height: 60px;
+                    padding: 5px 10px 0px 100px;
                     border-radius: 25px;
-                    border: 10px solid black;
-                    outline: none;
-                    background-color: $primary-redmode;
-                    font-weight: bold;
-                    color: white;
-                    transition: margin-right 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
+                    margin-right: 75px;
+
+                    a {
+                        height: 70%;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        outline: none;
+                        background-color: $primary-redmode;
+                        font-weight: bold;
+                        color: white;
+                        transition: margin-right 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
             }
         }
