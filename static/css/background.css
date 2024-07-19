@@ -1,7 +1,12 @@
-HTML {
+body {
     height: 100%;
     overflow: hidden;
     background: black;
+    /* background: white; */
+}
+
+section {
+    height: 0;
 }
 
 #stars {

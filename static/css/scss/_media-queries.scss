@@ -1,0 +1,18 @@
+// 1046
+@mixin tablet {
+    @media screen and (max-width: 1102px) {
+        @content;
+    }
+}
+
+@mixin tablet2 {
+    @media screen and (max-width: 790px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 444px) {
+        @content;
+    }
+}
