@@ -17,9 +17,7 @@ navLinks.forEach(link => {
             } else {
                 l.parentElement.classList.remove('active');
             }
-        })
-
-        sidebar.classList.remove('active');
+        });
     });
 });
 

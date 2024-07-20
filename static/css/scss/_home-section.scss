@@ -53,6 +53,13 @@
                     margin: 0 20px ;
                     text-decoration: none;
                     color: $primary-redmode;
+                    
+                    &:hover i {
+                        border-radius: 50%;
+                        color: $secondary-redmode;
+                        box-shadow: 0 0 5px $primary-redmode,
+                                    0 0 25px $primary-redmode;
+                    }
                 }
 
                 .download-btn {
@@ -67,6 +74,12 @@
                     padding: 0px 50px;
                     border-radius: 25px;
                     height: 70px;
+
+                    &:hover {
+                        background-color: $secondary-redmode;
+                        box-shadow: 0 0 5px $primary-redmode,
+                                    0 0 25px $primary-redmode;
+                    }
                 }
             }
         }

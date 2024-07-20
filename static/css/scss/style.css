@@ -212,6 +212,11 @@ main .container .home__container .right-content--bottom .brand a {
   text-decoration: none;
   color: #FF0000;
 }
+main .container .home__container .right-content--bottom .brand a:hover i {
+  border-radius: 50%;
+  color: #FF6C6C;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+}
 main .container .home__container .right-content--bottom .download-btn {
   text-decoration: none;
   background-color: #FF0000;
@@ -224,6 +229,10 @@ main .container .home__container .right-content--bottom .download-btn {
   padding: 0px 50px;
   border-radius: 25px;
   height: 70px;
+}
+main .container .home__container .right-content--bottom .download-btn:hover {
+  background-color: #FF6C6C;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 @media screen and (max-width: 1224px) {
   main .container .home__container {
