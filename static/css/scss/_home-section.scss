@@ -37,8 +37,31 @@
                     font-size: 40px;
                 }
 
-                h1 span {
-                    color: $secondary-bluemode;
+                h1 {
+                    z-index: -1;
+                    position: relative;
+
+                    span {
+                        color: $secondary-bluemode;
+                    }
+
+                    .cover {
+                        position: absolute;
+                        left: 30px;
+                        bottom: 0;
+                        top: 0;
+                        background-color: black;
+                        width: 300px;
+                        animation: slide 5s ease-in-out infinite;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 30;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
                 }
             }
 
@@ -95,5 +118,17 @@
         @include tablet {
             flex-wrap: wrap;
         }
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: 30px; // Mulai dari luar layar di sebelah kiri
+    }
+    50% {
+        left: 300px; // Bergerak ke luar layar di sebelah kanan
+    }
+    100% {
+        left: 30px; // Kembali ke posisi awal di sebelah kiri
     }
 }

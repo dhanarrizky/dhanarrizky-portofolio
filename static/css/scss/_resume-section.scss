@@ -5,7 +5,69 @@
     padding-top: 120px;
 
     &__container {
-        background-color: aqua;
+        // background-color: aqua;
         height: 100%;
+
+        .title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section {
+            .card-resume {
+                // background-color: aqua;
+                height: 800px;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                .label {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    // background-color: red;
+                    height: 100%;
+                    width: 100px;
+                    position: relative;
+
+                    h3 {
+                        font-size: 25px;
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        position: absolute;
+                        left: -95px;
+                        transform: rotate(-90deg);
+                        background-color: $dark2-transparent;
+                        padding: 30px 90px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 2;
+                        
+                        &.education {
+                            top: 146px;
+                        }
+                        
+                        &.experience {
+                            bottom: 150px;
+                        }
+                        
+                        &.active {
+                            background-color: $dark2;
+                        }
+                    }
+                }
+
+                .content {
+                    height: 90%;
+                    width: 100%;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    background-color: $dark2;
+                    z-index: 3;
+                }
+            }
+        }
     }
 }

@@ -198,8 +198,28 @@ main .container .home__container .right-content--top .name {
   color: #FF0000;
   font-size: 40px;
 }
+main .container .home__container .right-content--top h1 {
+  z-index: -1;
+  position: relative;
+}
 main .container .home__container .right-content--top h1 span {
   color: #0094FF;
+}
+main .container .home__container .right-content--top h1 .cover {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  top: 0;
+  background-color: black;
+  width: 300px;
+  animation: slide 5s ease-in-out infinite;
+}
+main .container .home__container .right-content--top h1 .cover::after {
+  content: "";
+  position: absolute;
+  left: 30;
+  top: 50%;
+  transform: translateY(-50%);
 }
 main .container .home__container .right-content--middle {
   margin-top: 30px;
@@ -245,6 +265,17 @@ main .container .home__container .right-content--bottom .download-btn:hover {
 @media screen and (max-width: 1224px) {
   main .container .home__container {
     flex-wrap: wrap;
+  }
+}
+@keyframes slide {
+  0% {
+    left: 30px;
+  }
+  50% {
+    left: 300px;
+  }
+  100% {
+    left: 30px;
   }
 }
 main .container .services {
@@ -303,6 +334,55 @@ main .container .resume {
   padding-top: 120px;
 }
 main .container .resume__container {
-  background-color: aqua;
   height: 100%;
+}
+main .container .resume__container .title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .container .resume__container .section .card-resume {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main .container .resume__container .section .card-resume .label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100px;
+  position: relative;
+}
+main .container .resume__container .section .card-resume .label h3 {
+  font-size: 25px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  position: absolute;
+  left: -95px;
+  transform: rotate(-90deg);
+  background-color: rgba(46, 46, 46, 0.6745098039);
+  padding: 30px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+main .container .resume__container .section .card-resume .label h3.education {
+  top: 146px;
+}
+main .container .resume__container .section .card-resume .label h3.experience {
+  bottom: 150px;
+}
+main .container .resume__container .section .card-resume .label h3.active {
+  background-color: #2E2E2E;
+}
+main .container .resume__container .section .card-resume .content {
+  height: 90%;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #2E2E2E;
+  z-index: 3;
 }/*# sourceMappingURL=style.css.map */
