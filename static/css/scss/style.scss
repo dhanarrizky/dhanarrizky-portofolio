@@ -10,11 +10,12 @@
 @import 'media-queries';
 @import 'colors';
 @import 'navbar';
+
 main {
     .container {
-        // margin-top: 130px;
-        margin: 130px 30px 0px 30px;
+        // background-color: aliceblue;
+        margin: 0 50px;
         @import 'home-section';
-        @import 'serive-section';
+        @import 'service-section';
     }
 }

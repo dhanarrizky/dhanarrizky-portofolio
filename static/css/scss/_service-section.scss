@@ -1,4 +1,61 @@
 .services {
     height: 100vh;
-    background-color: aqua;
+    width: 100%;
+    color: white;
+    // background-color: aqua;
+
+    &__container {
+        .title {
+            margin: 30px;
+        }
+
+        .content {
+            // background-color: aqua;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            .card-skill {
+                background-color: $dark2;
+                width: 300px;
+                height: 400px;
+                padding: 40px;
+                border-radius: 25px;
+                box-shadow: 0 0 15px  $primary-redmode;
+
+                .top-card {
+                    display: flex;
+                    justify-content: space-between;
+
+                    a.logo {
+                        color: $primary-redmode;
+                        font-size: 30px;
+                        
+                    }
+                    
+                    a.click-me-btn {
+                        text-decoration: none;
+                        font-weight: bold;
+                        border-radius: 25px;
+                        padding: 5px 30px;
+                        color: white;
+                        background-color: $primary-redmode;
+                        font-size: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .content-card {
+                    margin-top: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+        }
+    }
 }
