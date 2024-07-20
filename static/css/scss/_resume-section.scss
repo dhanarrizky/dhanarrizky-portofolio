@@ -1,0 +1,11 @@
+.resume {
+    height: 100vh;
+    // background-color: aqua;
+    color: white;
+    padding-top: 120px;
+
+    &__container {
+        background-color: aqua;
+        height: 100%;
+    }
+}

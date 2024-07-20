@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header .side-bar .btn-contact-me, header nav .right-nav .btn-contact-me {
@@ -166,7 +167,7 @@ main .container {
 }
 main .container .home {
   height: 100%;
-  padding: 80px 0;
+  padding-top: 80px;
   color: white;
 }
 main .container .home__container {
@@ -185,6 +186,10 @@ main .container .home__container .left-content img {
   border-radius: 50%;
   transform: rotate(90deg);
   box-shadow: 10px 0 15px #FF0000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .container .home__container .left-content img:hover {
+  transform: scale(1.1) rotate(90deg);
 }
 main .container .home__container .right-content--top p {
   font-size: 12px;
@@ -214,9 +219,11 @@ main .container .home__container .right-content--bottom .brand a {
   color: #FF0000;
 }
 main .container .home__container .right-content--bottom .brand a:hover i {
-  border-radius: 50%;
   color: #FF6C6C;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+}
+main .container .home__container .right-content--bottom .brand a:hover i.fa-github {
+  border-radius: 50%;
 }
 main .container .home__container .right-content--bottom .download-btn {
   text-decoration: none;
@@ -241,9 +248,10 @@ main .container .home__container .right-content--bottom .download-btn:hover {
   }
 }
 main .container .services {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: white;
+  padding-top: 100px;
 }
 main .container .services__container .title {
   margin: 30px;
@@ -288,4 +296,13 @@ main .container .services__container .content .card-skill .content-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+main .container .resume {
+  height: 100vh;
+  color: white;
+  padding-top: 120px;
+}
+main .container .resume__container {
+  background-color: aqua;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
