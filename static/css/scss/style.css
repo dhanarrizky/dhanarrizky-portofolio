@@ -513,6 +513,10 @@ main .container .resume__container .section .card-bg .card-education {
   border: 2px solid #FF0000;
   background-color: #151515;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+main .container .resume__container .section .card-bg .card-education:hover {
+  transform: translateY(-20px);
 }
 main .container .resume__container .section .card-bg .card-education.left {
   left: 20px;
@@ -635,5 +639,122 @@ main .container .portofolio__container .portofolio-content .card-portofolio .bot
 main .container .contact {
   padding-top: 130px;
   color: white;
-  height: 100vh;
+  height: 100%;
+}
+main .container .contact__container .contact-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+main .container .contact__container .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .container .contact__container .contact-content .card-bg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .container .contact__container .contact-content .card-bg .card-contact {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-left {
+  width: 350px;
+  padding: 20px;
+  background-color: #2E2E2E;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-left .img-content img {
+  height: 310px;
+  border-radius: 15px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-left .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content p {
+  margin: 20px 0;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right {
+  background-color: #2E2E2E;
+  width: 800px;
+  border-radius: 25px;
+  padding: 30px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row {
+  display: flex;
+  gap: 40px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col {
+  width: 100%;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form input {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3f3f3f;
+  padding: 10px;
+  color: white;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form textarea {
+  color: white;
+  padding: 10px;
+  background-color: #3f3f3f;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row button {
+  background-color: #FF0000;
+  color: white;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+footer .footer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+footer .footer span {
+  display: block;
+  height: 2px;
+  width: 80%;
+  margin: 30px;
+  background-color: #FF0000; /* Ganti dengan $primary-redmode jika sudah terdefinisi */
 }/*# sourceMappingURL=style.css.map */

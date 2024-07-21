@@ -82,7 +82,12 @@
                     background-color: $dark;
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
-    
+                    transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-20px);
+                    }
+                    
                     &.left {
                         left: 20px;
                     }

@@ -1,0 +1,17 @@
+footer .footer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    span {
+        display: block;
+        height: 2px;
+        width: 80%;
+        margin: 30px;
+        background-color: $primary-redmode; /* Ganti dengan $primary-redmode jika sudah terdefinisi */
+    }
+}
+
