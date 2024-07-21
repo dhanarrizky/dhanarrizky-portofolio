@@ -342,6 +342,102 @@ main .container .services__container .content .card-skill:hover {
   transform: scale(1.1);
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
+main .container .services .services_detail_skill {
+  display: none;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+main .container .services .services_detail_skill.active {
+  display: block;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(46, 46, 46, 0.6196078431);
+  z-index: 10;
+}
+main .container .services .services_detail_skill.active .background-detail-skill {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(46, 46, 46, 0.6745098039);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #FF0000;
+  background-color: rgba(46, 46, 46, 0.6745098039);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #FF0000;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill {
+  height: 75%;
+  width: 90%;
+  background-color: #2E2E2E;
+  border-radius: 30px;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .top i {
+  color: #FF0000;
+  font-size: 35px;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .line {
+  margin: 0 30px;
+  height: 80%;
+  width: 4px;
+  background-color: #FF0000;
+  border-radius: 15px;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill .img-content {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: aqua;
+  border: 2px solid #FF0000;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+}
 main .container .resume {
   height: 100vh;
   color: white;
@@ -354,49 +450,4 @@ main .container .resume__container .title {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-main .container .resume__container .section .card-resume {
-  height: 800px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-main .container .resume__container .section .card-resume .label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  width: 100px;
-  position: relative;
-}
-main .container .resume__container .section .card-resume .label h3 {
-  font-size: 25px;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  position: absolute;
-  left: -95px;
-  transform: rotate(-90deg);
-  background-color: rgba(46, 46, 46, 0.6745098039);
-  padding: 30px 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-main .container .resume__container .section .card-resume .label h3.education {
-  top: 146px;
-}
-main .container .resume__container .section .card-resume .label h3.experience {
-  bottom: 150px;
-}
-main .container .resume__container .section .card-resume .label h3.active {
-  background-color: #2E2E2E;
-}
-main .container .resume__container .section .card-resume .content {
-  height: 90%;
-  width: 100%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #2E2E2E;
-  z-index: 3;
 }/*# sourceMappingURL=style.css.map */

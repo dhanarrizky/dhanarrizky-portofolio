@@ -57,6 +57,55 @@ function updateContent() {
     }
 }
 
-console.log(professioncover.clientWidth)
-
 setInterval(updateContent, 20);
+
+// services scripts
+document.addEventListener('DOMContentLoaded', () => {
+    const servicesDetailSkill = document.querySelector('.services_detail_skill');
+    const body = document.querySelector('body');
+    const cardSkills = document.querySelectorAll('.card-skill');
+    const closeButton = document.querySelector('.services_detail_skill .close');
+
+    const updateDetailSkill = () => {
+        if (servicesDetailSkill && servicesDetailSkill.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    };
+
+    cardSkills.forEach(card => {
+        card.addEventListener('click', () => {
+            servicesDetailSkill.classList.add('active');
+            updateDetailSkill();
+        });
+    });
+
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            servicesDetailSkill.classList.remove('active');
+            setTimeout(() => {
+                servicesDetailSkill.classList.remove('visible');
+                updateDetailSkill();
+            }, 1000); // Sesuaikan waktu dengan durasi transisi CSS (1s)
+        });
+    }
+});
+
+
+
+// resume script
+document.addEventListener('DOMContentLoaded', () => {
+    const resumeLabels = document.querySelectorAll('#resume-label h3');
+    resumeLabels.forEach(label => {
+        label.addEventListener('click', () => {
+            resumeLabels.forEach(l => {
+                if (l !== label) {
+                    l.classList.remove('active');
+                }
+            });
+            label.classList.add('active');
+        });
+    });
+});
+

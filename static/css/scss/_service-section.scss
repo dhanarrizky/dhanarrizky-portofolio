@@ -3,7 +3,6 @@
     width: 100%;
     color: white;
     padding-top: 100px;
-    // background-color: aqua;
 
     &__container {
         .title {
@@ -11,7 +10,6 @@
         }
 
         .content {
-            // background-color: aqua;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -61,6 +59,119 @@
                     transform: scale(1.1);
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
+                }
+            }
+        }
+    }
+
+    .services_detail_skill {
+        display: none;
+        opacity: 0;
+        transition: 1s ease-in-out;
+        
+        &.active {
+            display: block;
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: #2e2e2e9e;
+            z-index: 10;
+    
+            .background-detail-skill {
+                height: 100%;
+                width: 100%;
+                background-color: $dark2-transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+    
+                .close {
+                    position: absolute;
+                    top: 20px;
+                    right: 40px; 
+                    text-decoration: none;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: $primary-redmode;
+                    background-color: $dark2-transparent;
+                    height: 50px;
+                    width: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    border: 2px solid $primary-redmode;
+                    box-shadow: 0 0 5px $primary-redmode,
+                                0 0 25px $primary-redmode;
+                }
+    
+                .card-detail-skill {
+                    height: 75%;
+                    width: 90%;
+                    background-color: $dark2;
+                    border-radius: 30px;
+                    box-shadow: 0 0 5px $primary-redmode,
+                                0 0 25px $primary-redmode;
+                    padding: 30px;
+    
+                    display: flex;
+                    // justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+    
+                    .left-content {
+                        width: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+    
+                        .top i {
+                            color: $primary-redmode;
+                            font-size: 35px;
+                        }
+                    }
+    
+                    .line {
+                        margin: 0 30px;
+                        height: 80%;
+                        width: 4px;
+                        background-color: $primary-redmode;
+                        border-radius: 15px;
+                    }
+    
+                    .right-content {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .circle-skill {
+                            height: 150px;
+                            width: 150px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            .img-content {    
+                                height: 100px;
+                                width: 100px;
+                                border-radius: 50%;
+                                background-color: aqua;
+                                border: 2px solid $primary-redmode;
+                                box-shadow: 0 0 5px $primary-redmode,
+                                            0 0 25px $primary-redmode;
+                            }
+    
+                        }
+                    }
                 }
             }
         }
