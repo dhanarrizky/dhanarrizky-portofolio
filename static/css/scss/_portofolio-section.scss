@@ -23,6 +23,8 @@
                 width: 400px;
                 padding: 20px;
                 border-radius: 25px;
+                box-shadow: 0 0 5px $primary-redmode,
+                            0 0 10px $primary-redmode;
 
                 .top-img .img {
                     background-color: grey;

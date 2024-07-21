@@ -611,6 +611,7 @@ main .container .portofolio__container .portofolio-content .card-portofolio {
   width: 400px;
   padding: 20px;
   border-radius: 25px;
+  box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000;
 }
 main .container .portofolio__container .portofolio-content .card-portofolio .top-img .img {
   background-color: grey;
