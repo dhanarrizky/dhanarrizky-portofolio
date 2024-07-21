@@ -207,22 +207,26 @@ main .container .home__container .right-content--top h1 span {
 }
 main .container .home__container .right-content--top h1 .cover {
   position: absolute;
-  left: 30px;
+  right: 95px;
   bottom: 0;
   top: 0;
   background-color: black;
-  width: 300px;
-  animation: slide 5s ease-in-out infinite;
+  width: 0;
+  animation: expandWidth 5s ease-in-out infinite;
+  transform-origin: right;
 }
 main .container .home__container .right-content--top h1 .cover::after {
   content: "";
   position: absolute;
-  left: 30;
+  right: 0; /* Memastikan pseudo-elemen juga berada di sisi kanan */
   top: 50%;
   transform: translateY(-50%);
 }
 main .container .home__container .right-content--middle {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 main .container .home__container .right-content--bottom {
   margin-top: 30px;
@@ -262,20 +266,35 @@ main .container .home__container .right-content--bottom .download-btn:hover {
   background-color: #FF6C6C;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
+main .container .home__container .right-content--bottom .download-btn.icon {
+  display: none;
+}
+@media screen and (max-width: 790px) {
+  main .container .home__container .right-content--bottom .download-btn {
+    display: none;
+  }
+  main .container .home__container .right-content--bottom .download-btn.icon {
+    display: flex;
+    gap: 10px;
+  }
+}
 @media screen and (max-width: 1224px) {
   main .container .home__container {
     flex-wrap: wrap;
   }
 }
-@keyframes slide {
+@keyframes expandWidth {
   0% {
-    left: 30px;
+    width: 0; /* Lebar awal */
+    right: 95px; /* Memastikan elemen tetap di sisi kanan */
   }
   50% {
-    left: 300px;
+    width: 500px; /* Lebar akhir */
+    right: 95px; /* Menetapkan posisi kiri agar elemen melebar ke kiri */
   }
   100% {
-    left: 30px;
+    width: 0;
+    right: 95px;
   }
 }
 main .container .services {
@@ -301,10 +320,11 @@ main .container .services__container .content .card-skill {
   padding: 40px;
   border-radius: 25px;
   box-shadow: 0 0 15px #FF0000;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 main .container .services__container .content .card-skill .top-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 main .container .services__container .content .card-skill .top-card a.logo {
   color: #FF0000;
@@ -323,10 +343,14 @@ main .container .services__container .content .card-skill .top-card a.click-me-b
   align-items: center;
 }
 main .container .services__container .content .card-skill .content-card {
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+main .container .services__container .content .card-skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 main .container .resume {
   height: 100vh;

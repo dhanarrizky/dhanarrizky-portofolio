@@ -47,26 +47,31 @@
 
                     .cover {
                         position: absolute;
-                        left: 30px;
+                        right: 95px;
                         bottom: 0;
                         top: 0;
                         background-color: black;
-                        width: 300px;
-                        animation: slide 5s ease-in-out infinite;
+                        width: 0;
+                        animation: expandWidth 5s ease-in-out infinite;
+                        transform-origin: right;
 
                         &::after {
                             content: '';
                             position: absolute;
-                            left: 30;
+                            right: 0; /* Memastikan pseudo-elemen juga berada di sisi kanan */
                             top: 50%;
                             transform: translateY(-50%);
                         }
                     }
+                    
                 }
             }
 
             &--middle {
                 margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
             }
 
             &--bottom {
@@ -82,7 +87,7 @@
                     margin: 0 20px ;
                     text-decoration: none;
                     color: $primary-redmode;
-                    
+
                     &:hover i {
                         &.fa-github{
                             border-radius: 50%;
@@ -91,6 +96,7 @@
                         box-shadow: 0 0 5px $primary-redmode,
                                     0 0 25px $primary-redmode;
                     }
+
                 }
 
                 .download-btn {
@@ -111,6 +117,20 @@
                         box-shadow: 0 0 5px $primary-redmode,
                                     0 0 25px $primary-redmode;
                     }
+
+                    &.icon {
+                        display: none;
+                        
+                    }
+
+                    @include tablet2 {
+                        display: none;   
+                        
+                        &.icon {
+                            display: flex;
+                            gap: 10px;
+                        }
+                    }
                 }
             }
         }
@@ -121,14 +141,17 @@
     }
 }
 
-@keyframes slide {
+@keyframes expandWidth {
     0% {
-        left: 30px; // Mulai dari luar layar di sebelah kiri
+        width: 0; /* Lebar awal */
+        right: 95px; /* Memastikan elemen tetap di sisi kanan */
     }
     50% {
-        left: 300px; // Bergerak ke luar layar di sebelah kanan
+        width: 500px; /* Lebar akhir */
+        right: 95px; /* Menetapkan posisi kiri agar elemen melebar ke kiri */
     }
-    100% {
-        left: 30px; // Kembali ke posisi awal di sebelah kiri
+    100%{
+        width: 0;
+        right: 95px;
     }
 }

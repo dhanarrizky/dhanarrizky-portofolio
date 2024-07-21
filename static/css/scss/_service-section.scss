@@ -25,15 +25,15 @@
                 padding: 40px;
                 border-radius: 25px;
                 box-shadow: 0 0 15px  $primary-redmode;
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
 
                 .top-card {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-end;
 
                     a.logo {
                         color: $primary-redmode;
                         font-size: 30px;
-                        
                     }
                     
                     a.click-me-btn {
@@ -51,10 +51,16 @@
                 }
 
                 .content-card {
-                    margin-top: 50px;
+                    margin-top: 10px;
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 5px $primary-redmode,
+                                0 0 25px $primary-redmode;
                 }
             }
         }

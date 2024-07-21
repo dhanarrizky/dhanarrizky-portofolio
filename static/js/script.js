@@ -30,3 +30,29 @@ const checkWidth = () => {
 
 window.addEventListener('resize', checkWidth);
 checkWidth();
+
+// home scripts
+const profession = document.querySelector('#profession');
+const cover = document.querySelector('.cover');
+const contents = [
+    "Programmer",
+    "Web Development",
+    "Front-End Development",
+    "Back-End Development",
+    "Software Engginer",
+    "Freelancer"
+];
+
+let index = 0;
+
+function updateContent() {
+    if (cover.clientWidth >= 490) {
+        profession.innerHTML = contents[index];
+        index = index + 1;
+        if(index >= contents.length) {
+            index = 0;
+        }
+    }
+}
+
+setInterval(updateContent, 20);
