@@ -134,3 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const sliderEE = document.querySelectorAll('.slider-experience-education h1');
+
+sliderEE.forEach(slider => {
+    
+    slider.addEventListener('click', () => {
+        sliderEE.forEach(s => {
+            s.classList.remove('active');
+        });
+        slider.classList.add('active');
+    });
+});
+

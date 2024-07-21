@@ -1,0 +1,58 @@
+.portofolio {
+    // background-color: aqua;
+    padding-top: 120px;
+    height: 100%;
+    color: white;
+
+    &__container {
+        .top-title {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+        }
+
+        .portofolio-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .card-portofolio {
+                background-color: $dark2-transparent;
+                width: 400px;
+                padding: 20px;
+                border-radius: 25px;
+
+                .top-img .img {
+                    background-color: grey;
+                    height: 200px;
+                    border-radius: 15px;
+                    margin-bottom: 20px;
+                }
+
+                .bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 20px;
+
+                    a {
+                        text-decoration: none;
+                        padding: 5px 20px;
+                        color: white;
+                        font-weight: bold;
+                        background-color: transparent;
+                        border-radius: 25px;
+                        border: 2px solid $primary-redmode;
+
+                        &:hover {
+                            background-color: $secondary-redmode;
+                            box-shadow: 0 0 5px $primary-redmode,
+                                        0 0 25px $primary-redmode;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

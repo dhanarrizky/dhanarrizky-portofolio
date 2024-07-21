@@ -28,7 +28,7 @@ header {
     
     nav {
         top: 0;
-        background-color: $dark;
+        background-color: $dark2-transparent;
         color: white;
         display: flex;
         justify-content: space-between;
@@ -68,7 +68,7 @@ header {
                     transition: width 0.3s ease;
         
                     &.active {
-                        background-color: black;
+                        background-color: rgba(0, 0, 0, 0.478);
                         border-radius: 25px;
                         margin-top: 90px;
                         height: 50px;
@@ -125,6 +125,7 @@ header {
         transition: right 1s ease, margin-top 1s ease; // Apply transition to the right and margin-top properties
         overflow-y: auto;
         overflow-x: hidden;
+        z-index: 9;
         
         ul {
             margin-top: 40px;
