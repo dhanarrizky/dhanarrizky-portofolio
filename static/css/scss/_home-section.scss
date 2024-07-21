@@ -54,14 +54,6 @@
                         width: 0;
                         animation: expandWidth 5s ease-in-out infinite;
                         transform-origin: right;
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            right: 0; /* Memastikan pseudo-elemen juga berada di sisi kanan */
-                            top: 50%;
-                            transform: translateY(-50%);
-                        }
                     }
                     
                 }
@@ -143,15 +135,12 @@
 
 @keyframes expandWidth {
     0% {
-        width: 0; /* Lebar awal */
-        right: 95px; /* Memastikan elemen tetap di sisi kanan */
+        width: 0;
     }
     50% {
-        width: 500px; /* Lebar akhir */
-        right: 95px; /* Menetapkan posisi kiri agar elemen melebar ke kiri */
+        width: 500px;
     }
-    100%{
+    100% {
         width: 0;
-        right: 95px;
     }
 }
