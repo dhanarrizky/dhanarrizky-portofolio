@@ -207,7 +207,7 @@ main .container .home__container .right-content--top h1 span {
 }
 main .container .home__container .right-content--top h1 .cover {
   position: absolute;
-  right: 95px;
+  right: 0;
   bottom: 0;
   top: 0;
   background-color: black;
@@ -281,7 +281,7 @@ main .container .home__container .right-content--bottom .download-btn.icon {
     width: 0;
   }
   50% {
-    width: 500px;
+    width: 95%;
   }
   100% {
     width: 0;

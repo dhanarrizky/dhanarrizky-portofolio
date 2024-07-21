@@ -34,6 +34,8 @@ checkWidth();
 // home scripts
 const profession = document.querySelector('#profession');
 const cover = document.querySelector('.cover');
+const professioncover = document.querySelector('#profession-cover');
+
 const contents = [
     "Programmer",
     "Web Development",
@@ -46,7 +48,7 @@ const contents = [
 let index = 0;
 
 function updateContent() {
-    if (cover.clientWidth >= 490) {
+    if (cover.clientWidth >= (professioncover.clientWidth - 35)) {
         profession.innerHTML = contents[index];
         index = index + 1;
         if(index >= contents.length) {
@@ -54,5 +56,7 @@ function updateContent() {
         }
     }
 }
+
+console.log(professioncover.clientWidth)
 
 setInterval(updateContent, 20);
