@@ -345,7 +345,6 @@ main .container .services__container .content .card-skill:hover {
 main .container .services .services_detail_skill {
   display: none;
   opacity: 0;
-  transition: 1s ease-in-out;
 }
 main .container .services .services_detail_skill.active {
   display: block;
@@ -439,9 +438,10 @@ main .container .services .services_detail_skill.active .background-detail-skill
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 main .container .resume {
-  height: 100vh;
+  height: 2000px;
   color: white;
   padding-top: 120px;
+  margin-bottom: 30px;
 }
 main .container .resume__container {
   height: 100%;
@@ -450,4 +450,69 @@ main .container .resume__container .title {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+main .container .resume__container .title .slider-experience-education {
+  display: flex;
+  background-color: #2E2E2E;
+  gap: 50px;
+  padding: 20px 30px;
+  border-radius: 50px;
+}
+main .container .resume__container .title .slider-experience-education h1.active {
+  background-color: #FF0000;
+}
+main .container .resume__container .section {
+  background-color: rgba(46, 46, 46, 0.6745098039);
+  border-radius: 25px;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  position: relative;
+}
+main .container .resume__container .section .line {
+  position: absolute;
+  background-color: #FF0000;
+  height: 95%;
+  width: 2px;
+  left: 50%;
+}
+main .container .resume__container .section .card-bg {
+  width: 100%;
+}
+main .container .resume__container .section .card-bg .card-education {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  padding: 30px;
+  border-radius: 25px;
+  border: 2px solid #FF0000;
+  background-color: #151515;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+}
+main .container .resume__container .section .card-bg .card-education.left {
+  left: 0;
+}
+main .container .resume__container .section .card-bg .card-education.right {
+  right: 0;
+}
+main .container .resume__container .section .card-bg .card-education .top-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+main .container .resume__container .section .card-bg .card-education .top-card .title-card {
+  font-size: 20px;
+  font-weight: bold;
+}
+main .container .resume__container .section .card-bg .card-education .top-card .year {
+  background-color: #FF6C6C;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

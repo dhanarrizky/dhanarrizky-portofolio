@@ -1,7 +1,8 @@
 .resume {
-    height: 100vh;
+    height: 2000px;
     color: white;
     padding-top: 120px;
+    margin-bottom: 30px;
 
     &__container {
         height: 100%;
@@ -10,10 +11,83 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 100px;
+
+            .slider-experience-education {
+                display: flex;
+                background-color: $dark2;
+                gap: 50px;
+                padding: 20px 30px;
+                border-radius: 50px;
+
+                h1.active {
+                    background-color: $primary-redmode;
+                }
+            }
         }
 
         .section {
-            
+            background-color: $dark2-transparent;
+            border-radius: 25px;
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            position: relative;
+
+            .line {
+                position: absolute;
+                background-color: $primary-redmode;
+                height: 95%;
+                width: 2px;
+                left: 50%;
+            }
+
+            .card-bg {
+                width: 100%;
+                .card-education {
+                    position: absolute;
+                    width: 45%;
+                    height: auto;
+                    padding: 30px;
+                    border-radius: 25px;
+                    border: 2px solid $primary-redmode;
+                    background-color: $dark;
+                    box-shadow: 0 0 5px $primary-redmode,
+                                0 0 25px $primary-redmode;
+    
+                    &.left {
+                        left: 0;
+                    }
+    
+                    &.right {
+                        right: 0;
+                    }
+    
+                    .top-card {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin-bottom: 30px;
+    
+    
+                        .title-card {
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                        
+                        .year {
+                            background-color: $secondary-redmode;
+                            padding: 5px 20px;
+                            border-radius: 5px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
         }
     }
 }

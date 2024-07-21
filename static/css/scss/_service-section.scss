@@ -67,7 +67,7 @@
     .services_detail_skill {
         display: none;
         opacity: 0;
-        transition: 1s ease-in-out;
+        // transition: 1s ease-in-out;
         
         &.active {
             display: block;
