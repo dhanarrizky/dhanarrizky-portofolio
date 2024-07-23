@@ -23,13 +23,13 @@
                 background-color: $dark2;
                 gap: 10px;
                 border-radius: 50px;
-                // transition: all 1s ease-in-out;
                 
                 h1 {
+                    transition: all 0.5s ease-in-out;
+                    border-radius: 50px;
                     padding: 20px 30px;
                     
                     &.active {
-                        border-radius: 50px;
                         background-color: $primary-redmode;
                     }
                 }

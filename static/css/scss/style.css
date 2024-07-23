@@ -466,10 +466,11 @@ main .container .resume__container .title .slider-experience-education {
   border-radius: 50px;
 }
 main .container .resume__container .title .slider-experience-education h1 {
+  transition: all 0.5s ease-in-out;
+  border-radius: 50px;
   padding: 20px 30px;
 }
 main .container .resume__container .title .slider-experience-education h1.active {
-  border-radius: 50px;
   background-color: #FF0000;
 }
 main .container .resume__container .section {
@@ -588,6 +589,11 @@ main .container .client__container .client-content .right-content img {
   border-top-right-radius: 45px;
   border-bottom-right-radius: 45px;
   background-color: aliceblue;
+  transition: all 0.3s;
+}
+main .container .client__container .client-content .right-content img:hover {
+  transform: scale(-1.05, 1.05);
+  right: -35px;
 }
 main .container .portofolio {
   padding-top: 120px;
@@ -724,6 +730,10 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   padding: 10px;
   color: white;
 }
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form input:active {
+  content: "";
+  outline: 1px solid #FF0000;
+}
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form textarea {
   color: white;
   padding: 10px;
@@ -731,6 +741,10 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   height: 300px;
   border: none;
   border-radius: 15px;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form textarea:active {
+  content: "";
+  outline: 1px solid #FF0000;
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row button {
   background-color: #FF0000;

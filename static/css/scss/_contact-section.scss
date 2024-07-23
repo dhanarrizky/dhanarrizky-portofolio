@@ -93,6 +93,11 @@
                                             background-color: #3f3f3f;
                                             padding: 10px;
                                             color: white;
+
+                                            &:active {
+                                                content: '';
+                                                outline: 1px solid $primary-redmode;
+                                            }
                                         }
                                         
                                         textarea {
@@ -102,6 +107,11 @@
                                             height: 300px;
                                             border: none;
                                             border-radius: 15px;
+                                            
+                                            &:active {
+                                                content: '';
+                                                outline: 1px solid $primary-redmode;
+                                            }
                                         }
                                     }
                                 }

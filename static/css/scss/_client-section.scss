@@ -53,6 +53,12 @@
                     border-top-right-radius: 45px;
                     border-bottom-right-radius: 45px;
                     background-color: aliceblue;
+                    transition: all 0.3s;
+
+                    &:hover {
+                       transform: scale(-1.05,1.05);
+                       right: -35px;
+                    }
                 }
             }
         }
