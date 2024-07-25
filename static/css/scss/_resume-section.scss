@@ -1,5 +1,5 @@
 .resume {
-    height: 2300px;
+    height: 100%;
     color: white;
     padding-top: 120px;
     margin-bottom: 30px;
@@ -44,78 +44,79 @@
             height: 87%;
             display: flex;
             flex-wrap: wrap;
-            gap: 100px;
+            gap: 50px;
             position: relative;
 
             .line {
                 position: absolute;
                 background-color: $primary-redmode;
-                height: 95%;
+                height: 90%;
                 width: 2px;
+                top: 5%;
                 left: 50%;
+                transform: translateX(-50%);
+                z-index: 4;
             }
 
             .card-bg {
-                width: 100%;
-                position: relative;
-                // background-color: aqua;
+               background-color: gray;
+               height: 250px;
+               display: flex;
+               position: relative;
+               
+               &.left {
+                    justify-content: flex-start;
+               }
 
-                .pointer {
-                    left: 49.4%;
-                    top: 40%;
-                    height: 20px;
-                    width: 20px;
+               &.right {
+                    justify-content: flex-end;
+               }
+
+               .pointer {
+                    height: 30px;
+                    width: 30px;
                     border-radius: 50%;
-                    position: absolute;
                     background-color: $primary-redmode;
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
-                }
-
-                .card-education {
                     position: absolute;
+                    top: 45%;
+                    left: 49%;
+               }
+
+               .card-education {
                     width: 45%;
-                    height: auto;
-                    padding: 30px;
+                    padding: 25px;
                     border-radius: 25px;
                     border: 2px solid $primary-redmode;
-                    background-color: $dark;
+                    background-color: black;
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
-                    transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
 
                     &:hover {
-                        transform: translateY(-20px);
+                        transform: translateY(-17px); // Menggunakan translateY untuk naik sedikit
                     }
-                    
-                    &.left {
-                        left: 20px;
-                    }
-    
-                    &.right {
-                        right: 20px;
-                    }
-    
+
                     .top-card {
                         display: flex;
-                        flex-wrap: wrap;
                         justify-content: space-between;
-                        margin-bottom: 30px;
-    
-    
+                        margin-bottom: 25px;
+
                         .title-card {
                             font-size: 20px;
                             font-weight: bold;
                         }
-                        
+
                         .year {
                             background-color: $secondary-redmode;
-                            padding: 5px 20px;
-                            border-radius: 5px;
+                            padding: 0 10px;
+                            display: flex;
+                            align-items: center;
                             font-weight: bold;
                         }
                     }
-                }
+               }
             }
         }
     }
