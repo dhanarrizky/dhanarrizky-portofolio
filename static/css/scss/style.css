@@ -495,8 +495,7 @@ main .container .resume__container .section .line {
   z-index: 4;
 }
 main .container .resume__container .section .card-bg {
-  background-color: gray;
-  height: 250px;
+  height: 100%;
   display: flex;
   position: relative;
 }
@@ -562,6 +561,11 @@ main .container .client__container .client-content .left-content {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (max-width: 1224px) {
+  main .container .client__container .client-content .left-content {
+    justify-content: center;
+  }
+}
 main .container .client__container .client-content .left-content .circle-client {
   height: 140px;
   width: 140px;
@@ -581,6 +585,11 @@ main .container .client__container .client-content .right-content {
   position: relative;
   width: 1600px;
   height: 800px;
+}
+@media screen and (max-width: 1224px) {
+  main .container .client__container .client-content .right-content {
+    display: none;
+  }
 }
 main .container .client__container .client-content .right-content img {
   position: absolute;

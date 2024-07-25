@@ -18,6 +18,10 @@
                 flex-wrap: wrap;
                 gap: 30px;
 
+                @include tablet {
+                    justify-content: center;
+                }
+
                 .circle-client {
                     // background-color: aqua;
                     height: 140px;
@@ -43,6 +47,9 @@
                 height: 800px;
                 // background-color: aqua;
                 // overflow-x: hidden;
+                @include tablet {
+                    display: none;
+                }
                 
                 img {
                     position: absolute;
@@ -54,11 +61,13 @@
                     border-bottom-right-radius: 45px;
                     background-color: aliceblue;
                     transition: all 0.3s;
-
+                    
                     &:hover {
-                       transform: scale(-1.05,1.05);
-                       right: -35px;
+                        transform: scale(-1.05,1.05);
+                        right: -35px;
                     }
+
+
                 }
             }
         }
