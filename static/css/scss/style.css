@@ -192,6 +192,25 @@ main .container .home__container .left-content img {
 main .container .home__container .left-content img:hover {
   transform: scale(1.1) rotate(90deg);
 }
+@media screen and (max-width: 790px) {
+  main .container .home__container .left-content img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    transform: rotate(90deg);
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .home__container .left-content img {
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    transform: rotate(90deg);
+  }
+}
+main .container .home__container .right-content {
+  margin-top: 20px;
+}
 main .container .home__container .right-content--top p {
   font-size: 12px;
 }
@@ -215,6 +234,16 @@ main .container .home__container .right-content--top h1 .cover {
   width: 0;
   animation: expandWidth 5s ease-in-out infinite;
   transform-origin: right;
+}
+@media screen and (max-width: 790px) {
+  main .container .home__container .right-content--top h1 {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .home__container .right-content--top h1 {
+    font-size: 18px;
+  }
 }
 main .container .home__container .right-content--middle {
   margin-top: 30px;
@@ -400,13 +429,17 @@ main .container .services .services_detail_skill.active .background-detail-skill
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content {
   width: 25%;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .top i {
   color: #FF0000;
   font-size: 35px;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .bottom h3 {
+  margin-bottom: 30px;
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .line {
   margin: 0 30px;
@@ -459,6 +492,7 @@ main .container .resume__container .title {
 main .container .resume__container .title .slider-experience-education {
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #2E2E2E;
@@ -705,8 +739,24 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   flex-direction: column;
   gap: 10px;
 }
+main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content div {
+  display: flex;
+  justify-content: space-between;
+}
 main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content p {
   margin: 20px 0;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .bottom-content {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1224px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-left {
+    width: 100%;
+  }
+  main .container .contact__container .contact-content .card-bg .card-contact .content {
+    margin-top: 20px;
+  }
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right {
   background-color: #2E2E2E;
@@ -722,6 +772,7 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col {
@@ -768,6 +819,16 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   font-weight: bold;
   font-size: 20px;
   margin: 25px 0;
+}
+@media screen and (max-width: 1224px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 790px) {
+  main .container {
+    margin: 0 20px;
+  }
 }
 
 footer .footer {

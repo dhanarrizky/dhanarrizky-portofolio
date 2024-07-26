@@ -52,11 +52,31 @@
                                 display: flex;
                                 flex-direction: column;
                                 gap: 10px;
+
+                                div {
+                                    display: flex;
+                                    justify-content: space-between;
+                                }
         
                                 p {
                                     margin: 20px 0;
                                 }
                             }
+
+                            .bottom-content {
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+
+                    @include tablet {
+                        .card-left {
+                            width: 100%;
+                        }
+
+                        .content {
+                            margin-top: 20px;
                         }
                     }
 
@@ -74,6 +94,7 @@
 
                             .row {
                                 display: flex;
+                                flex-wrap: wrap;
                                 gap: 40px;
 
                                 .col {
@@ -128,6 +149,12 @@
                                     margin: 25px 0;
                                 }
                             }
+                        }
+                    }
+
+                    @include tablet {
+                        .card-right {
+                            width: 100%;
                         }
                     }
                 }

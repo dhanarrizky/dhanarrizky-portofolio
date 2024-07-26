@@ -33,19 +33,6 @@ bars.addEventListener('click', () => {
     sidebar.classList.toggle('active');
 });
 
-// navLinks.forEach(link => {
-//     link.addEventListener("click", () => {
-//         const href = link.getAttribute('href');
-
-//         navLinks.forEach(l => {
-//             if(l.getAttribute('href') === href) {
-//                 l.parentElement.classList.add('active');
-//             } else {
-//                 l.parentElement.classList.remove('active');
-//             }
-//         });
-//     });
-// });
 
 const checkWidth = () => {
     if(window.innerWidth >= 1102){
@@ -90,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
     const cardSkills = document.querySelectorAll('.card-skill');
     const closeButton = document.querySelector('.services_detail_skill .close');
+    const cardDetailSkillh1 = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .bottom h3');
+    const cardDetailSkillp = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .bottom p');
+    const cardDetailSkilllogo = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .top i');
 
     const updateDetailSkill = () => {
         if (servicesDetailSkill && servicesDetailSkill.classList.contains('active')) {
@@ -103,6 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             servicesDetailSkill.classList.add('active');
             updateDetailSkill();
+            const logo = card.querySelector('.top-card .logo i').classList;
+            console.log("logo : ", logo);
+            cardDetailSkilllogo.classList = logo
+            const h1Content = card.querySelector('.content-card h2').innerText;
+            console.log("h1 : ", h1Content);
+            cardDetailSkillh1.innerText = h1Content;
+            const pContent = card.querySelector('.content-card p').innerText;
+            console.log("p : ", pContent);
+            cardDetailSkillp.innerText = pContent;
         });
     });
 
@@ -112,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 servicesDetailSkill.classList.remove('visible');
                 updateDetailSkill();
-            }, 1000); // Sesuaikan waktu dengan durasi transisi CSS (1s)
+            }, 1000);
         });
     }
 });

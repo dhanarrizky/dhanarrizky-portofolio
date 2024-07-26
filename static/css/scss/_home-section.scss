@@ -24,9 +24,29 @@
             &:hover {
                 transform: scale(1.1) rotate(90deg);
             }
+            
+        }
+
+        @include tablet2 {
+            .left-content img {
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                transform: rotate(90deg);
+            }
+        }
+        
+        @include mobile {
+            .left-content img {
+                height: 270px;
+                width: 270px;
+                border-radius: 50%;
+                transform: rotate(90deg);
+            }
         }
 
         .right-content {
+            margin-top: 20px;
             &--top {
                 p {
                     font-size: 12px;
@@ -56,6 +76,13 @@
                         transform-origin: right;
                     }
                     
+                    @include tablet2 {
+                        font-size: 23px;
+                    }
+
+                    @include mobile {
+                        font-size: 18px;
+                    }
                 }
             }
 
@@ -112,7 +139,6 @@
 
                     &.icon {
                         display: none;
-                        
                     }
 
                     @include tablet2 {

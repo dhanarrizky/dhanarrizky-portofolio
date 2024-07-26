@@ -26,6 +26,10 @@ main {
         @import 'client-section';
         @import 'portofolio-section';
         @import 'contact-section';
+
+        @include tablet2 {
+            margin: 0 20px
+        }
     }
 }
 
