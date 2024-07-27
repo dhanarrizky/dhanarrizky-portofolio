@@ -16,7 +16,29 @@
 @import 'colors';
 @import 'navbar';
 
+
 main {
+    .settingsCollor {
+        color: $primary-redmode;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: 2px solid $primary-redmode;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        font-weight: bold;
+        box-shadow: 0 0 5px $primary-redmode,
+                    0 0 25px $primary-redmode;
+        transform: rotate(-90deg);
+        animation: spin 5s linear infinite;
+    }
+
     .container {
         // background-color: aliceblue;
         margin: 0 50px;
@@ -34,3 +56,12 @@ main {
 }
 
 @import 'footer-section';
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

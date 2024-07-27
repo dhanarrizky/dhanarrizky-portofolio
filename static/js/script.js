@@ -145,3 +145,63 @@ sliderEE.forEach(slider => {
     });
 });
 
+
+// button change mode
+const changeMode = () => {
+    const primaryRedColor = "rgb(255, 0, 0)";
+    const primaryBlueColor = "rgb(0, 56, 255)";
+    const secondaryRedColor = "rgb(255, 0, 0)";
+    const secondaryBlueColor = "rgb(0, 148, 255)";
+
+    const allElements = document.querySelectorAll('*');
+
+    allElements.forEach(element => {
+        const styles = getComputedStyle(element);
+
+        // Change primary red to primary blue
+        if (styles.color === primaryRedColor) {
+            element.style.color = primaryBlueColor;
+        }
+
+        if (styles.borderColor === primaryRedColor) {
+            element.style.borderColor = primaryBlueColor;
+        }
+
+        if (styles.backgroundColor === primaryRedColor) {
+            element.style.backgroundColor = primaryBlueColor;
+        }
+
+        if (styles.boxShadow.includes(primaryRedColor)) {
+            let newBoxShadow = styles.boxShadow.replace(/rgb\(255, 0, 0\)/g, primaryBlueColor);
+            element.style.boxShadow = newBoxShadow;
+        }
+
+        // Change secondary red to secondary blue
+        if (styles.color === secondaryRedColor) {
+            element.style.color = secondaryBlueColor;
+        }
+
+        if (styles.borderColor === secondaryRedColor) {
+            element.style.borderColor = secondaryBlueColor;
+        }
+
+        if (styles.backgroundColor === secondaryRedColor) {
+            element.style.backgroundColor = secondaryBlueColor;
+        }
+
+        if (styles.boxShadow.includes(secondaryRedColor)) {
+            let newBoxShadow = styles.boxShadow.replace(/rgb\(255, 0, 0\)/g, secondaryBlueColor);
+            element.style.boxShadow = newBoxShadow;
+        }
+    });
+}
+
+const settingBtn = document.querySelector('.settingsCollor')
+settingBtn.addEventListener('click', () => {
+    changeMode();
+});
+
+// $primary-redmode:#FF0000;
+// $secondary-redmode:#FF6C6C;
+// $primary-bluemode:#0038FF;
+// $secondary-bluemode:#0094FF;

@@ -163,6 +163,25 @@ header .side-bar.active {
   transition: right 1s ease;
 }
 
+main .settingsCollor {
+  color: #FF0000;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid #FF0000;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+  transform: rotate(-90deg);
+  animation: spin 5s linear infinite;
+}
 main .container {
   margin: 0 50px;
 }
@@ -870,4 +889,13 @@ footer .footer span {
   width: 80%;
   margin: 30px;
   background-color: #FF0000; /* Ganti dengan $primary-redmode jika sudah terdefinisi */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
