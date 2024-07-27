@@ -158,39 +158,60 @@ const changeMode = () => {
     allElements.forEach(element => {
         const styles = getComputedStyle(element);
 
-        // Change primary red to primary blue
+        // Change color
         if (styles.color === primaryRedColor) {
             element.style.color = primaryBlueColor;
+        } else if (styles.color === primaryBlueColor) {
+            element.style.color = primaryRedColor;
         }
 
+        // Change border color
         if (styles.borderColor === primaryRedColor) {
             element.style.borderColor = primaryBlueColor;
+        } else if (styles.borderColor === primaryBlueColor) {
+            element.style.borderColor = primaryRedColor;
         }
 
+        // Change background color
         if (styles.backgroundColor === primaryRedColor) {
             element.style.backgroundColor = primaryBlueColor;
+        } else if (styles.backgroundColor === primaryBlueColor) {
+            element.style.backgroundColor = primaryRedColor;
         }
 
+        // Change box-shadow color
         if (styles.boxShadow.includes(primaryRedColor)) {
             let newBoxShadow = styles.boxShadow.replace(/rgb\(255, 0, 0\)/g, primaryBlueColor);
+            element.style.boxShadow = newBoxShadow;
+        } else if (styles.boxShadow.includes(primaryBlueColor)) {
+            let newBoxShadow = styles.boxShadow.replace(/rgb\(0, 56, 255\)/g, primaryRedColor);
             element.style.boxShadow = newBoxShadow;
         }
 
         // Change secondary red to secondary blue
         if (styles.color === secondaryRedColor) {
             element.style.color = secondaryBlueColor;
+        } else if (styles.color === secondaryBlueColor) {
+            element.style.color = secondaryRedColor;
         }
 
         if (styles.borderColor === secondaryRedColor) {
             element.style.borderColor = secondaryBlueColor;
+        } else if (styles.borderColor === secondaryBlueColor) {
+            element.style.borderColor = secondaryRedColor;
         }
 
         if (styles.backgroundColor === secondaryRedColor) {
             element.style.backgroundColor = secondaryBlueColor;
+        } else if (styles.backgroundColor === secondaryBlueColor) {
+            element.style.backgroundColor = secondaryRedColor;
         }
 
         if (styles.boxShadow.includes(secondaryRedColor)) {
             let newBoxShadow = styles.boxShadow.replace(/rgb\(255, 0, 0\)/g, secondaryBlueColor);
+            element.style.boxShadow = newBoxShadow;
+        } else if (styles.boxShadow.includes(secondaryBlueColor)) {
+            let newBoxShadow = styles.boxShadow.replace(/rgb\(0, 148, 255\)/g, secondaryRedColor);
             element.style.boxShadow = newBoxShadow;
         }
     });
