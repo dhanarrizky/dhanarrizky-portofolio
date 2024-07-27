@@ -130,6 +130,7 @@
                     padding: 0px 50px;
                     border-radius: 25px;
                     height: 70px;
+                    gap: 10px;
 
                     &:hover {
                         background-color: $secondary-redmode;
@@ -146,7 +147,6 @@
                         
                         &.icon {
                             display: flex;
-                            gap: 10px;
                         }
                     }
                 }

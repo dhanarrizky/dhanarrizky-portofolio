@@ -169,6 +169,12 @@
                                     font-weight: bold;
                                     font-size: 20px;
                                     margin: 25px 0;
+
+                                    &:hover {
+                                        background-color: $secondary-redmode;
+                                        box-shadow: 0 0 5px $primary-redmode,
+                                                    0 0 25px $primary-redmode;
+                                    }
                                 }
                             }
                         }

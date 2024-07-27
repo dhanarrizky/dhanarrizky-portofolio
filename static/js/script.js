@@ -310,3 +310,14 @@ const changeMode = () => {
 // settingBtn.addEventListener('click', () => {
 //     changeMode();
 // });
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah pengiriman formulir secara default
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoLink = `mailto:drizkyk9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`)}`;
+    window.location.href = mailtoLink;
+});

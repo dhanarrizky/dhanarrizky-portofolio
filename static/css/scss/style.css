@@ -312,6 +312,7 @@ main .container .home__container .right-content--bottom .download-btn {
   padding: 0px 50px;
   border-radius: 25px;
   height: 70px;
+  gap: 10px;
 }
 main .container .home__container .right-content--bottom .download-btn:hover {
   background-color: #FF6C6C;
@@ -326,7 +327,6 @@ main .container .home__container .right-content--bottom .download-btn.icon {
   }
   main .container .home__container .right-content--bottom .download-btn.icon {
     display: flex;
-    gap: 10px;
   }
 }
 @media screen and (max-width: 1224px) {
@@ -906,6 +906,10 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   font-weight: bold;
   font-size: 20px;
   margin: 25px 0;
+}
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row button:hover {
+  background-color: #FF6C6C;
+  box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 @media screen and (max-width: 1224px) {
   main .container .contact__container .contact-content .card-bg .card-contact .card-right {
