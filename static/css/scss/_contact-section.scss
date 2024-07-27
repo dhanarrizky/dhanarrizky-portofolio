@@ -139,8 +139,7 @@
                                             padding: 10px;
                                             color: white;
 
-                                            &:active {
-                                                content: '';
+                                            &:focus {
                                                 outline: 1px solid $primary-redmode;
                                             }
                                         }
@@ -153,8 +152,7 @@
                                             border: none;
                                             border-radius: 15px;
                                             
-                                            &:active {
-                                                content: '';
+                                            &:focus {
                                                 outline: 1px solid $primary-redmode;
                                             }
                                         }

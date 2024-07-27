@@ -57,12 +57,20 @@
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 4;
+
+                @include tablet2 {
+                    left: 95%;
+                }
             }
 
             .card-bg {
                 height: 100%;
                 display: flex;
                 position: relative;
+
+                &.experience {
+                    display: none;
+                }
                
                 &.left {
                     justify-content: flex-start;
@@ -70,6 +78,12 @@
 
                 &.right {
                     justify-content: flex-end;
+                }
+                
+                @include tablet2 {
+                    &.right {
+                        justify-content: flex-start;
+                    }
                 }
 
                 .pointer {
@@ -84,9 +98,13 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     z-index: 5; /* Ensure this is higher than the .line z-index */
+
+                    @include tablet2 {
+                        left: 99%;
+                    }
                 }
 
-                .card-education {
+                .card-education-experience {
                     width: 45%;
                     padding: 25px;
                     border-radius: 25px;
@@ -96,12 +114,17 @@
                                 0 0 25px $primary-redmode;
                     transition: all 0.5s ease-in-out;
 
+                    @include tablet2 {
+                        width: 93%;
+                    }
+
                     &:hover {
                         transform: translateY(-17px); // Menggunakan translateY untuk naik sedikit
                     }
 
                     .top-card {
                         display: flex;
+                        gap: 20px;
                         justify-content: space-between;
                         margin-bottom: 25px;
 
@@ -116,6 +139,10 @@
                             display: flex;
                             align-items: center;
                             font-weight: bold;
+                        }
+
+                        @include tablet2 {
+                            flex-wrap: wrap;
                         }
                     }
                 }

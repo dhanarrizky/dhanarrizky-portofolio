@@ -123,6 +123,10 @@
                     justify-content: center;
                     align-items: center;
                     gap: 20px;
+
+                    @include tablet2 {
+                        height: 90%;
+                    }
     
                     .left-content {
                         width: 25%;

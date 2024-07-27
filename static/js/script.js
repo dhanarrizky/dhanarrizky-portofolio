@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const sliderEE = document.querySelectorAll('.slider-experience-education h1');
+const educationCard = document.querySelectorAll('.card-bg.education')
+const experienceCard = document.querySelectorAll('.card-bg.experience')
 
 sliderEE.forEach(slider => {
     
@@ -142,6 +144,22 @@ sliderEE.forEach(slider => {
             s.classList.remove('active');
         });
         slider.classList.add('active');
+        console.log(slider.innerHTML)
+        if(slider.innerHTML === 'Experience'){
+            educationCard.forEach(e => {
+                e.style.display = 'none';
+            });
+            experienceCard.forEach(e => {
+                e.style.display = 'flex';
+            });
+        } else {
+            educationCard.forEach(e => {
+                e.style.display = 'flex';
+            });
+            experienceCard.forEach(e => {
+                e.style.display = 'none';
+            });
+        }
     });
 });
 

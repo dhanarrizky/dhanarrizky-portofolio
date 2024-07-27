@@ -33,6 +33,8 @@ header a:hover {
 header nav {
   top: 0;
   background-color: rgba(46, 46, 46, 0.6745098039);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -453,6 +455,11 @@ main .container .services .services_detail_skill.active .background-detail-skill
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 790px) {
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill {
+    height: 90%;
+  }
+}
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content {
   width: 25%;
   height: 90%;
@@ -554,16 +561,29 @@ main .container .resume__container .section .line {
   transform: translateX(-50%);
   z-index: 4;
 }
+@media screen and (max-width: 790px) {
+  main .container .resume__container .section .line {
+    left: 95%;
+  }
+}
 main .container .resume__container .section .card-bg {
   height: 100%;
   display: flex;
   position: relative;
+}
+main .container .resume__container .section .card-bg.experience {
+  display: none;
 }
 main .container .resume__container .section .card-bg.left {
   justify-content: flex-start;
 }
 main .container .resume__container .section .card-bg.right {
   justify-content: flex-end;
+}
+@media screen and (max-width: 790px) {
+  main .container .resume__container .section .card-bg.right {
+    justify-content: flex-start;
+  }
 }
 main .container .resume__container .section .card-bg .pointer {
   height: 30px;
@@ -577,7 +597,12 @@ main .container .resume__container .section .card-bg .pointer {
   transform: translate(-50%, -50%);
   z-index: 5; /* Ensure this is higher than the .line z-index */
 }
-main .container .resume__container .section .card-bg .card-education {
+@media screen and (max-width: 790px) {
+  main .container .resume__container .section .card-bg .pointer {
+    left: 99%;
+  }
+}
+main .container .resume__container .section .card-bg .card-education-experience {
   width: 45%;
   padding: 25px;
   border-radius: 25px;
@@ -586,24 +611,35 @@ main .container .resume__container .section .card-bg .card-education {
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
   transition: all 0.5s ease-in-out;
 }
-main .container .resume__container .section .card-bg .card-education:hover {
+@media screen and (max-width: 790px) {
+  main .container .resume__container .section .card-bg .card-education-experience {
+    width: 93%;
+  }
+}
+main .container .resume__container .section .card-bg .card-education-experience:hover {
   transform: translateY(-17px);
 }
-main .container .resume__container .section .card-bg .card-education .top-card {
+main .container .resume__container .section .card-bg .card-education-experience .top-card {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   margin-bottom: 25px;
 }
-main .container .resume__container .section .card-bg .card-education .top-card .title-card {
+main .container .resume__container .section .card-bg .card-education-experience .top-card .title-card {
   font-size: 20px;
   font-weight: bold;
 }
-main .container .resume__container .section .card-bg .card-education .top-card .year {
+main .container .resume__container .section .card-bg .card-education-experience .top-card .year {
   background-color: #FF6C6C;
   padding: 0 10px;
   display: flex;
   align-items: center;
   font-weight: bold;
+}
+@media screen and (max-width: 790px) {
+  main .container .resume__container .section .card-bg .card-education-experience .top-card {
+    flex-wrap: wrap;
+  }
 }
 main .container .client {
   padding-top: 120px;
@@ -846,8 +882,7 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   padding: 10px;
   color: white;
 }
-main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form input:active {
-  content: "";
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form input:focus {
   outline: 1px solid #FF0000;
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form textarea {
@@ -858,8 +893,7 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
   border: none;
   border-radius: 15px;
 }
-main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form textarea:active {
-  content: "";
+main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col .control-form textarea:focus {
   outline: 1px solid #FF0000;
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row button {
