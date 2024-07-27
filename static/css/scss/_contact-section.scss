@@ -55,7 +55,17 @@
 
                                 div {
                                     display: flex;
+                                    flex-direction: column;
                                     justify-content: space-between;
+
+                                    
+                                    @include tablet {
+                                        flex-direction: row;
+                                    }
+
+                                    @include mobile {
+                                        flex-direction: column;
+                                    }
                                 }
         
                                 p {
@@ -65,7 +75,16 @@
 
                             .bottom-content {
                                 display: flex;
+                                flex-direction: column;
                                 justify-content: space-between;
+
+                                @include tablet {
+                                    flex-direction: row;
+                                }
+
+                                @include mobile {
+                                    flex-direction: column;
+                                }
                             }
                         }
                     }
@@ -88,14 +107,19 @@
 
                         form {
                             height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 20px;
+                            // display: flex;
+                            // flex-direction: column;
+                            // gap: 20px;
 
                             .row {
                                 display: flex;
-                                flex-wrap: wrap;
                                 gap: 40px;
+
+                                @include tablet {
+                                    gap: 20px;
+                                    flex-wrap: wrap;
+                                    margin-bottom: 20px;
+                                }
 
                                 .col {
                                     width: 100%;

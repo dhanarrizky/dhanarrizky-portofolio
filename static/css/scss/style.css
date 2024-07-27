@@ -741,14 +741,36 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content div {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 1224px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content div {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content div {
+    flex-direction: column;
+  }
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .top-content p {
   margin: 20px 0;
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .bottom-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 1224px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .bottom-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-left .content .bottom-content {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 1224px) {
   main .container .contact__container .contact-content .card-bg .card-contact .card-left {
@@ -766,14 +788,17 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row {
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
+}
+@media screen and (max-width: 1224px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row {
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
 }
 main .container .contact__container .contact-content .card-bg .card-contact .card-right form .row .col {
   width: 100%;
