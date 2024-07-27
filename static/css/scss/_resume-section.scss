@@ -60,20 +60,19 @@
             }
 
             .card-bg {
-            //    height: 250px;
-               height: 100%;
-               display: flex;
-               position: relative;
+                height: 100%;
+                display: flex;
+                position: relative;
                
-               &.left {
+                &.left {
                     justify-content: flex-start;
-               }
+                }
 
-               &.right {
+                &.right {
                     justify-content: flex-end;
-               }
+                }
 
-               .pointer {
+                .pointer {
                     height: 30px;
                     width: 30px;
                     border-radius: 50%;
@@ -81,11 +80,13 @@
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
                     position: absolute;
-                    top: 45%;
-                    left: 49%;
-               }
+                    top: 50%; /* Adjust this value as needed to center vertically */
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 5; /* Ensure this is higher than the .line z-index */
+                }
 
-               .card-education {
+                .card-education {
                     width: 45%;
                     padding: 25px;
                     border-radius: 25px;
@@ -117,7 +118,7 @@
                             font-weight: bold;
                         }
                     }
-               }
+                }
             }
         }
     }

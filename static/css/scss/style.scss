@@ -37,6 +37,12 @@ main {
                     0 0 25px $primary-redmode;
         transform: rotate(-90deg);
         animation: spin 5s linear infinite;
+
+        @include tablet2 {
+            height: 50px;
+            width: 50px;
+            font-size: 35px;
+        }
     }
 
     .container {
