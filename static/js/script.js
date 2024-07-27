@@ -311,6 +311,8 @@ const changeMode = () => {
 //     changeMode();
 // });
 
+
+// send email 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Mencegah pengiriman formulir secara default
     const name = document.getElementById('name').value;
@@ -321,3 +323,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const mailtoLink = `mailto:drizkyk9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`)}`;
     window.location.href = mailtoLink;
 });
+
+// scrolling animation

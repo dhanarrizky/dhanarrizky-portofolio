@@ -350,6 +350,7 @@ main .container .services {
   width: 100%;
   color: white;
   padding-top: 100px;
+  animation: scrollingAnimation linear;
 }
 main .container .services__container .title {
   margin: 30px;

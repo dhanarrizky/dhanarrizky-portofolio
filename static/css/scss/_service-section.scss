@@ -3,6 +3,8 @@
     width: 100%;
     color: white;
     padding-top: 100px;
+    animation: scrollingAnimation linear;
+    // animation-timeline: view();
 
     &__container {
         .title {
