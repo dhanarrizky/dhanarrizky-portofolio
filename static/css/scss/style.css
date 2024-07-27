@@ -497,12 +497,12 @@ main .container .services .services_detail_skill.active .background-detail-skill
   justify-content: space-between;
   align-items: center;
 }
-main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill .img-content {
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill .img-content img {
   height: 100px;
   width: 100px;
+  padding: 5px;
   border-radius: 50%;
-  background-color: aqua;
-  border: 2px solid #FF0000;
+  background-color: #FF0000;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 main .container .resume {

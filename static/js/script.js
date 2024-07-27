@@ -72,6 +72,40 @@ function updateContent() {
 setInterval(updateContent, 20);
 
 // services scripts
+const SkillIcons = {
+    cpp:"./static/img/Skill-icons/cplusplus.svg",
+    angular:"./static/img/Skill-icons/angular.svg",
+    css3:"./static/img/Skill-icons/css3.svg",
+    django:"./static/img/Skill-icons/django.svg",
+    dotnet:"./static/img/Skill-icons/dotnet.svg",
+    go:"./static/img/Skill-icons/go.svg",
+    html5:"./static/img/Skill-icons/html5.svg",
+    htmlx:"./static/img/Skill-icons/htmlx.svg",
+    javascript:"./static/img/Skill-icons/javascript.svg",
+    laravel:"./static/img/Skill-icons/laravel.svg",
+    linuxserver:"./static/img/Skill-icons/linuxserver.svg",
+    mysql:"./static/img/Skill-icons/mysql.svg",
+    php:"./static/img/Skill-icons/php.svg",
+    postgresql:"./static/img/Skill-icons/postgresql.svg",
+    postman:"./static/img/Skill-icons/postman.svg",
+    python:"./static/img/Skill-icons/python.svg",
+    sass:"./static/img/Skill-icons/sass.svg",
+    sping:"./static/img/Skill-icons/spring.svg",
+    sqlite:"./static/img/Skill-icons/sqlite.svg",
+}
+
+const SkillList = {
+    WebDevelopment : ['dotnet','django','laravel'],
+    FrontEndDevelopment : ['angular','html5','javascript','sass','css3'],
+    BackEndDevelopment : ['django','dotnet','laravel','go','python','php','mysql',
+        'postgresql','sqlite', 'javascript'
+    ],
+    SofwareEngineering : ['postman','cpp','go'],
+    MaintenanceAndUpdates : ['django','dotnet','laravel','go','python','javascript']
+}
+
+// console.log(SkillIcons.angular)
+
 document.addEventListener('DOMContentLoaded', () => {
     const servicesDetailSkill = document.querySelector('.services_detail_skill');
     const body = document.querySelector('body');
@@ -80,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardDetailSkillh1 = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .bottom h3');
     const cardDetailSkillp = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .bottom p');
     const cardDetailSkilllogo = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .top i');
+    const rightContentDetail = document.querySelector('.card-detail-skill .right-content');
 
     const updateDetailSkill = () => {
         if (servicesDetailSkill && servicesDetailSkill.classList.contains('active')) {
@@ -94,14 +129,50 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesDetailSkill.classList.add('active');
             updateDetailSkill();
             const logo = card.querySelector('.top-card .logo i').classList;
-            console.log("logo : ", logo);
             cardDetailSkilllogo.classList = logo
             const h1Content = card.querySelector('.content-card h2').innerText;
-            console.log("h1 : ", h1Content);
             cardDetailSkillh1.innerText = h1Content;
             const pContent = card.querySelector('.content-card p').innerText;
-            console.log("p : ", pContent);
             cardDetailSkillp.innerText = pContent;
+
+            let contentdetail = '';
+            let filterSkillList = '';
+
+            switch (cardDetailSkillh1.innerText) {
+                case 'Web Development':
+                    filterSkillList = 'WebDevelopment';
+                    break;
+                case 'Front-End Development':
+                    filterSkillList = 'FrontEndDevelopment';
+                    break;
+                case 'Back-End Development':
+                    filterSkillList = 'BackEndDevelopment';
+                    break;
+                case 'Software Engineering':
+                    filterSkillList = 'SofwareEngineering';
+                    break;
+                case 'Maintenance and Updates':
+                    filterSkillList = 'MaintenanceAndUpdates';
+                    break;
+                default:
+                    break;
+            }
+
+            SkillList[filterSkillList].forEach(s => [
+                contentdetail += `
+                                    <div class="circle-skill">
+                                        <div class="img-content">
+                                            <img src="${SkillIcons[s]}" alt="${s}">
+                                        </div>
+                                        <h3>${s}</h3>
+                                    </div>
+                                `
+            ]);
+            console.log(contentdetail);
+
+            rightContentDetail.innerHTML = `
+                ${contentdetail}
+            `;
         });
     });
 
@@ -110,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesDetailSkill.classList.remove('active');
             setTimeout(() => {
                 servicesDetailSkill.classList.remove('visible');
+                // rightContentDetail.innerHTML = ``;
                 updateDetailSkill();
             }, 1000);
         });
@@ -162,7 +234,6 @@ sliderEE.forEach(slider => {
         }
     });
 });
-
 
 // button change mode
 const changeMode = () => {
@@ -239,8 +310,3 @@ const settingBtn = document.querySelector('.settingsCollor')
 settingBtn.addEventListener('click', () => {
     changeMode();
 });
-
-// $primary-redmode:#FF0000;
-// $secondary-redmode:#FF6C6C;
-// $primary-bluemode:#0038FF;
-// $secondary-bluemode:#0094FF;

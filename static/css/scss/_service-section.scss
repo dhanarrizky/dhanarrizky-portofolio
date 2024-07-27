@@ -169,12 +169,22 @@
                             justify-content: space-between;
                             align-items: center;
     
-                            .img-content {    
+                            // .img-content {    
+                            //     height: 100px;
+                            //     width: 100px;
+                            //     border-radius: 50%;
+                            //     background-color: aqua;
+                            //     border: 2px solid $primary-redmode;
+                            //     box-shadow: 0 0 5px $primary-redmode,
+                            //                 0 0 25px $primary-redmode;
+                            // }
+                            
+                            .img-content img {
                                 height: 100px;
                                 width: 100px;
+                                padding: 5px;
                                 border-radius: 50%;
-                                background-color: aqua;
-                                border: 2px solid $primary-redmode;
+                                background-color: $primary-redmode;
                                 box-shadow: 0 0 5px $primary-redmode,
                                             0 0 25px $primary-redmode;
                             }
