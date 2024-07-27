@@ -306,7 +306,7 @@ const changeMode = () => {
     });
 }
 
-const settingBtn = document.querySelector('.settingsCollor')
-settingBtn.addEventListener('click', () => {
-    changeMode();
-});
+// const settingBtn = document.querySelector('.settingsCollor')
+// settingBtn.addEventListener('click', () => {
+//     changeMode();
+// });
