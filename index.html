@@ -67,9 +67,9 @@
             <div id="home-section" class="home sections">
                 <div class="home__container">
                     <div class="left-content">
-                        <img src="./static/img/dhanar.jpg" alt="dhanar-img">
+                        <img class="animate" src="./static/img/dhanar.jpg" alt="dhanar-img">
                     </div>
-                    <div class="right-content">
+                    <div class="right-content animate">
                         <div class="right-content--top">
                             <p class="welcome">WELCOME TO MY WORLD</p>
                             <h1>HI, I'm</h1>
@@ -101,11 +101,11 @@
             </div>
             <div id="service-section" class="services sections">
                 <div class="services__container">
-                    <div class="title">
+                    <div class="title animate animation-controller" id="service-title-animation">
                         <h1>What I Can Do</h1>
                     </div>
                     <div class="content">
-                        <div class="card-skill" id="card-skill">
+                        <div class="card-skill animation-controller" id="card-skill1">
                             <div class="top-card">
                                 <a href="#" class="logo">
                                     <i class="fas fa-code"></i>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
 
-                        <div class="card-skill" id="card-skill">
+                        <div class="card-skill animation-controller" id="card-skill2">
                             <div class="top-card">
                                 <a href="#" class="logo">
                                     <i class="fas fa-wifi"></i>
@@ -132,7 +132,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card-skill" id="card-skill">
+                        <div class="card-skill animation-controller" id="card-skill3">
                             <div class="top-card">
                                 <a href="#" class="logo">
                                     <i class="fas fa-wrench"></i>
@@ -145,7 +145,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card-skill" id="card-skill">
+                        <div class="card-skill animation-controller" id="card-skill4">
                             <div class="top-card">
                                 <a href="#" class="logo">
                                     <i class="fas fa-book-open"></i>
@@ -158,7 +158,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card-skill" id="card-skill">
+                        <div class="card-skill animation-controller" id="card-skill5">
                             <div class="top-card">
                                 <a href="#" class="logo">
                                     <i class="fas fa-upload"></i>
@@ -201,16 +201,16 @@
             </div>
             <div id="resume-section" class="resume sections">
                 <div class="resume__container">
-                    <div class="title">
+                    <div class="title animation-controller" id="resume-title">
                         <h1>My Resume</h1>
-                        <div class="slider-experience-education">
+                        <div class="slider-experience-education animation-controller" id="slider-EE-btn">
                             <h1 class="active">Education</h1>
                             <h1>Experience</h1>
                         </div>
                     </div>
                     <div class="section">
                         <span class="line"></span>
-                        <div class="card-bg left education">
+                        <div class="card-bg left education animation-controller" id="education-left">
                             <span class="pointer"></span>
                             <div class="card-education-experience">
                                 <div class="top-card">
@@ -228,7 +228,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-bg right education">
+                        <div class="card-bg right education animation-controller" id="education-right">
                             <span class="pointer"></span>
                             <div class="card-education-experience">
                                 <div class="top-card">
@@ -247,7 +247,7 @@
                             </div>
                         </div>
 
-                        <div class="card-bg right experience">
+                        <div class="card-bg right experience animation-controller" id="experience-right">
                             <span class="pointer"></span>
                             <div class="card-education-experience">
                                 <div class="top-card">
@@ -265,7 +265,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-bg left experience">
+                        <div class="card-bg left experience animation-controller" id="experience-left">
                             <span class="pointer"></span>
                             <div class="card-education-experience">
                                 <div class="top-card">
@@ -465,13 +465,13 @@
             </div> -->
             <div id="contact-section" class="contact sections">
                 <div class="contact__container">
-                    <div class="contact-title">
+                    <div class="contact-title animation-controller" id="contact-title">
                         <h1>Contact With Me</h1>
                     </div>
                     <div class="contact-content">
                         <div class="card-bg">
                             <div class="card-contact">
-                                <div class="card-left">
+                                <div class="card-left animation-controller" id="card-contact-left">
                                     <div class="img-content">
                                         <img src="./static/img/pantai2.jpg" alt="beach">
                                     </div>
@@ -492,7 +492,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-right">
+                                <div class="card-right animation-controller" id="card-contact-right">
                                     <form id="contactForm">
                                         <div class="row">
                                             <div class="col">

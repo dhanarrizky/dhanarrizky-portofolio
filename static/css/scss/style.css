@@ -216,9 +216,28 @@ main .container .home__container .left-content img {
   transform: rotate(90deg);
   box-shadow: 10px 0 15px #FF0000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
 }
 main .container .home__container .left-content img:hover {
   transform: scale(1.1) rotate(90deg);
+}
+main .container .home__container .left-content img.animate {
+  opacity: 1;
+  animation: rotate360 0.7s linear;
+}
+@keyframes rotate360 {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(120deg); /* 90deg + 360deg */
+  }
+  80% {
+    transform: scale(1.1) rotate(70deg); /* 90deg + 360deg */
+  }
+  100% {
+    transform: scale(1) rotate(90deg); /* 90deg + 360deg */
+  }
 }
 @media screen and (max-width: 790px) {
   main .container .home__container .left-content img {
@@ -238,6 +257,23 @@ main .container .home__container .left-content img:hover {
 }
 main .container .home__container .right-content {
   margin-top: 20px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+main .container .home__container .right-content.animate {
+  opacity: 1;
+  animation: goVisible 0.8s linear forwards;
+}
+@keyframes goVisible {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 main .container .home__container .right-content--top p {
   font-size: 12px;
@@ -350,10 +386,9 @@ main .container .services {
   width: 100%;
   color: white;
   padding-top: 100px;
-  animation: scrollingAnimation linear;
 }
 main .container .services__container .title {
-  margin: 30px;
+  margin: 50px;
 }
 main .container .services__container .content {
   display: flex;

@@ -325,3 +325,27 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 });
 
 // scrolling animation
+const idAnimationElements = document.querySelectorAll('.animation-controller');
+
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                console.log(`I can see this element : ${entry.target.id}`);
+            }, 500);
+        } else {
+            console.log(`xx : ${entry.target.id}`);
+        }
+    });
+};
+
+const observer = new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3
+});
+
+idAnimationElements.forEach(element => {
+    observer.observe(element);
+});
+
