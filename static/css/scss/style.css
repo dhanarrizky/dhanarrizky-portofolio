@@ -471,6 +471,7 @@ main .container .services__container .content .card-skill:hover {
 main .container .services .services_detail_skill {
   display: none;
   opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 main .container .services .services_detail_skill.active {
   display: block;
@@ -492,6 +493,7 @@ main .container .services .services_detail_skill.active .background-detail-skill
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-y: auto;
 }
 main .container .services .services_detail_skill.active .background-detail-skill .close {
   position: absolute;
@@ -523,6 +525,7 @@ main .container .services .services_detail_skill.active .background-detail-skill
   border-radius: 30px;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
   padding: 30px;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -589,9 +592,9 @@ main .container .services .services_detail_skill.active .background-detail-skill
   align-items: center;
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content {
-  background-color: aliceblue;
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   overflow-y: auto;
 }
@@ -615,6 +618,7 @@ main .container .services .services_detail_skill.active .background-detail-skill
   main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill {
     height: 100px;
     width: 100px;
+    margin-top: 30px;
   }
   main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill .img-content img {
     height: 60px;
