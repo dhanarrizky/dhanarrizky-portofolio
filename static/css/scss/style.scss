@@ -58,6 +58,10 @@ main {
         @include tablet2 {
             margin: 0 20px
         }
+
+        @include mobile {
+            margin: 0
+        }
     }
 }
 

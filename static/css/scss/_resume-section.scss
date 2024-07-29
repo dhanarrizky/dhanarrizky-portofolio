@@ -61,6 +61,10 @@
                 @include tablet2 {
                     left: 95%;
                 }
+
+                @include mobile {
+                    display: none;
+                }
             }
 
             .card-bg {
@@ -101,6 +105,10 @@
 
                     @include tablet2 {
                         left: 99%;
+                    }
+
+                    @include mobile {
+                        display: none;
                     }
                 }
 

@@ -99,6 +99,12 @@
                         }
                     }
 
+                    @include mobile {
+                        .card-left .img-content img {
+                            height: 280px;
+                        }
+                    }
+
                     .card-right {
                         background-color: $dark2;
                         width: 800px;

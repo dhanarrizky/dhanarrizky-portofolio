@@ -602,6 +602,11 @@ main .container .resume__container .section .line {
     left: 95%;
   }
 }
+@media screen and (max-width: 444px) {
+  main .container .resume__container .section .line {
+    display: none;
+  }
+}
 main .container .resume__container .section .card-bg {
   height: 100%;
   display: flex;
@@ -636,6 +641,11 @@ main .container .resume__container .section .card-bg .pointer {
 @media screen and (max-width: 790px) {
   main .container .resume__container .section .card-bg .pointer {
     left: 99%;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .resume__container .section .card-bg .pointer {
+    display: none;
   }
 }
 main .container .resume__container .section .card-bg .card-education-experience {
@@ -880,6 +890,11 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 444px) {
+  main .container .contact__container .contact-content .card-bg .card-contact .card-left .img-content img {
+    height: 280px;
+  }
+}
 main .container .contact__container .contact-content .card-bg .card-contact .card-right {
   background-color: #2E2E2E;
   width: 800px;
@@ -955,6 +970,11 @@ main .container .contact__container .contact-content .card-bg .card-contact .car
 @media screen and (max-width: 790px) {
   main .container {
     margin: 0 20px;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container {
+    margin: 0;
   }
 }
 

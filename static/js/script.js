@@ -1,4 +1,5 @@
 // styleing for navbar
+
 const navLinks = document.querySelectorAll('.nav-item--links');
 const bars = document.querySelector('.bars');
 const sidebar = document.querySelector('.side-bar');
@@ -345,7 +346,7 @@ const observer = new IntersectionObserver(callback, {
     threshold: 0.3
 });
 
-idAnimationElements.forEach(element => {
+idAnimationElements.forEach(element => {    
     observer.observe(element);
 });
 
