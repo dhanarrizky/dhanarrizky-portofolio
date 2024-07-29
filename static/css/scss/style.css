@@ -436,6 +436,26 @@ main .container .services__container .content .card-skill:hover {
   transform: scale(1.1);
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
+@media screen and (max-width: 444px) {
+  main .container .services__container .content .card-skill:nth-child(1) {
+    margin-left: 50px;
+  }
+  main .container .services__container .content .card-skill:nth-child(5) {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .services__container .content {
+    padding: 20px 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  main .container .services__container .content::-webkit-scrollbar {
+    display: none;
+  }
+}
 main .container .services .services_detail_skill {
   display: none;
   opacity: 0;
@@ -479,6 +499,11 @@ main .container .services .services_detail_skill.active .background-detail-skill
   border: 2px solid #FF0000;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
+@media screen and (max-width: 444px) {
+  main .container .services .services_detail_skill.active .background-detail-skill .close {
+    top: 43px;
+  }
+}
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill {
   height: 75%;
   width: 90%;
@@ -496,6 +521,12 @@ main .container .services .services_detail_skill.active .background-detail-skill
     height: 90%;
   }
 }
+@media screen and (max-width: 444px) {
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content {
   width: 25%;
   height: 90%;
@@ -510,12 +541,31 @@ main .container .services .services_detail_skill.active .background-detail-skill
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .bottom h3 {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 444px) {
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content {
+    width: 100%;
+  }
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .top i {
+    margin-top: 30px;
+    color: #FF0000;
+    font-size: 27px;
+  }
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .bottom h3 {
+    margin-bottom: 10px;
+  }
+}
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .line {
   margin: 0 30px;
   height: 80%;
   width: 4px;
   background-color: #FF0000;
   border-radius: 15px;
+}
+@media screen and (max-width: 444px) {
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .line {
+    width: 80%;
+    height: 4px;
+  }
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content {
   height: 100%;
@@ -540,6 +590,12 @@ main .container .services .services_detail_skill.active .background-detail-skill
   border-radius: 50%;
   background-color: #FF0000;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
+}
+@media screen and (max-width: 444px) {
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill .img-content img {
+    height: 80px;
+    width: 80px;
+  }
 }
 main .container .resume {
   height: 100%;

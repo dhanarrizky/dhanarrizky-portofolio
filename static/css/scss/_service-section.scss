@@ -60,6 +60,28 @@
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
                 }
+
+                @include mobile {
+                    &:nth-child(1) {
+                        margin-left: 50px;
+                    }
+
+                    &:nth-child(5) {
+                        margin-right: 50px;
+                    }
+                }
+            }
+
+            @include mobile {
+                padding: 20px 0;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
             }
         }
     }
@@ -108,6 +130,10 @@
                     border: 2px solid $primary-redmode;
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
+
+                    @include mobile {
+                        top: 43px;
+                    }
                 }
     
                 .card-detail-skill {
@@ -127,6 +153,11 @@
                     @include tablet2 {
                         height: 90%;
                     }
+
+                    @include mobile {
+                        flex-direction: column;
+                        padding: 20px;
+                    }
     
                     .left-content {
                         width: 25%;
@@ -143,6 +174,20 @@
                         .bottom h3 {
                             margin-bottom: 30px;
                         }
+
+                        @include mobile {
+                            width: 100%;
+
+                            .top i {
+                                margin-top: 30px;
+                                color: $primary-redmode;
+                                font-size: 27px;
+                            }
+    
+                            .bottom h3 {
+                                margin-bottom: 10px;
+                            }
+                        }
                     }
     
                     .line {
@@ -151,6 +196,11 @@
                         width: 4px;
                         background-color: $primary-redmode;
                         border-radius: 15px;
+
+                        @include mobile {
+                            width: 80%;
+                            height: 4px;
+                        }
                     }
     
                     .right-content {
@@ -160,6 +210,7 @@
                         flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
+                        // background-color: aliceblue;
     
                         .circle-skill {
                             height: 150px;
@@ -168,16 +219,6 @@
                             flex-direction: column;
                             justify-content: space-between;
                             align-items: center;
-    
-                            // .img-content {    
-                            //     height: 100px;
-                            //     width: 100px;
-                            //     border-radius: 50%;
-                            //     background-color: aqua;
-                            //     border: 2px solid $primary-redmode;
-                            //     box-shadow: 0 0 5px $primary-redmode,
-                            //                 0 0 25px $primary-redmode;
-                            // }
                             
                             .img-content img {
                                 height: 100px;
@@ -187,11 +228,19 @@
                                 background-color: $primary-redmode;
                                 box-shadow: 0 0 5px $primary-redmode,
                                             0 0 25px $primary-redmode;
+
+                                @include mobile {
+                                    height: 80px;
+                                    width: 80px;
+                                }
                             }
+
     
                         }
                     }
                 }
+
+              
             }
         }
     }

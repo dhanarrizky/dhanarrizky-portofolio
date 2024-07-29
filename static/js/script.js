@@ -209,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const sliderEE = document.querySelectorAll('.slider-experience-education h1');
 const educationCard = document.querySelectorAll('.card-bg.education')
 const experienceCard = document.querySelectorAll('.card-bg.experience')
+const cardsResume = document.querySelectorAll('.card-bg')
 
 sliderEE.forEach(slider => {
     
@@ -235,6 +236,18 @@ sliderEE.forEach(slider => {
         }
     });
 });
+
+const openDescription = () => {
+    console.log('test');
+}
+
+cardsResume.forEach(c => {
+    c.addEventListener('click', () => {
+        console.log(c.getAttribute('class'))
+    })
+});
+
+
 
 // button change mode
 const changeMode = () => {
