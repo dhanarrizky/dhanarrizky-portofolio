@@ -45,6 +45,12 @@ header nav {
   height: 100px;
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
+@media screen and (max-width: 444px) {
+  header nav {
+    height: 70px;
+    padding-top: 15px;
+  }
+}
 header nav .bars a {
   opacity: 0;
   color: #FF0000;
@@ -108,7 +114,7 @@ header .side-bar {
   background-color: #151515;
   right: -200px;
   position: fixed;
-  margin-top: 100px;
+  margin-top: 70px;
   height: calc(100% - 100px);
   width: 200px;
   display: flex;
@@ -336,6 +342,12 @@ main .container .home__container .right-content--bottom .brand a:hover i {
 main .container .home__container .right-content--bottom .brand a:hover i.fa-github {
   border-radius: 50%;
 }
+@media screen and (max-width: 444px) {
+  main .container .home__container .right-content--bottom .brand a {
+    font-size: 53px;
+    margin: 10px;
+  }
+}
 main .container .home__container .right-content--bottom .download-btn {
   text-decoration: none;
   background-color: #FF0000;
@@ -524,7 +536,9 @@ main .container .services .services_detail_skill.active .background-detail-skill
 @media screen and (max-width: 444px) {
   main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill {
     flex-direction: column;
-    padding: 20px;
+    padding: 150px 10px;
+    height: 100%;
+    overflow-y: auto;
   }
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content {
@@ -546,7 +560,6 @@ main .container .services .services_detail_skill.active .background-detail-skill
     width: 100%;
   }
   main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .left-content .top i {
-    margin-top: 30px;
     color: #FF0000;
     font-size: 27px;
   }
@@ -575,7 +588,14 @@ main .container .services .services_detail_skill.active .background-detail-skill
   justify-content: center;
   align-items: center;
 }
-main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill {
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content {
+  background-color: aliceblue;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill {
   height: 150px;
   width: 150px;
   display: flex;
@@ -583,18 +603,23 @@ main .container .services .services_detail_skill.active .background-detail-skill
   justify-content: space-between;
   align-items: center;
 }
-main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill .img-content img {
-  height: 100px;
-  width: 100px;
+main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill .img-content img {
+  height: 80px;
+  width: 80px;
   padding: 5px;
   border-radius: 50%;
   background-color: #FF0000;
   box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000;
 }
 @media screen and (max-width: 444px) {
-  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .circle-skill .img-content img {
-    height: 80px;
-    width: 80px;
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill {
+    height: 100px;
+    width: 100px;
+  }
+  main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill .img-content img {
+    height: 60px;
+    width: 60px;
+    padding: 2px;
   }
 }
 main .container .resume {

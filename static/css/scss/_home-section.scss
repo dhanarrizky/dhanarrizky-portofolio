@@ -157,6 +157,11 @@
                                     0 0 25px $primary-redmode;
                     }
 
+                    @include mobile {
+                        font-size: 53px;
+                        margin: 10px;
+                    }
+
                 }
 
                 .download-btn {

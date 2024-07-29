@@ -156,7 +156,9 @@
 
                     @include mobile {
                         flex-direction: column;
-                        padding: 20px;
+                        padding: 150px 10px;
+                        height: 100%;
+                        overflow-y: auto;
                     }
     
                     .left-content {
@@ -179,7 +181,7 @@
                             width: 100%;
 
                             .top i {
-                                margin-top: 30px;
+                                // margin-top: 100px;
                                 color: $primary-redmode;
                                 font-size: 27px;
                             }
@@ -211,31 +213,44 @@
                         justify-content: center;
                         align-items: center;
                         // background-color: aliceblue;
-    
-                        .circle-skill {
-                            height: 150px;
-                            width: 150px;
+                        .content {
+                            background-color: aliceblue;
+                            width: 100%;
                             display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                            align-items: center;
+                            flex-wrap: wrap;
+                            overflow-y: auto;
                             
-                            .img-content img {
-                                height: 100px;
-                                width: 100px;
-                                padding: 5px;
-                                border-radius: 50%;
-                                background-color: $primary-redmode;
-                                box-shadow: 0 0 5px $primary-redmode,
-                                            0 0 25px $primary-redmode;
-
-                                @include mobile {
+                            .circle-skill {
+                                height: 150px;
+                                width: 150px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: center;
+                                
+                                .img-content img {
                                     height: 80px;
                                     width: 80px;
+                                    padding: 5px;
+                                    border-radius: 50%;
+                                    background-color: $primary-redmode;
+                                    box-shadow: 0 0 5px $primary-redmode,
+                                                0 0 25px $primary-redmode;
                                 }
-                            }
-
+                                
+                                @include mobile {
+                                    height: 100px;
+                                    width: 100px;
     
+                                    .img-content img {
+                                        height: 60px;
+                                        width: 60px;
+                                        padding: 2px;
+                                    }
+                                }
+    
+        
+                            }
                         }
                     }
                 }

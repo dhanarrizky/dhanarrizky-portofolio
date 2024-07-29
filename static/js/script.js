@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardDetailSkillh1 = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .bottom h3');
     const cardDetailSkillp = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .bottom p');
     const cardDetailSkilllogo = document.querySelector('.services_detail_skill .background-detail-skill .card-detail-skill .top i');
-    const rightContentDetail = document.querySelector('.card-detail-skill .right-content');
+    const rightContentDetail = document.querySelector('.card-detail-skill .right-content .content');
 
     const updateDetailSkill = () => {
         if (servicesDetailSkill && servicesDetailSkill.classList.contains('active')) {
