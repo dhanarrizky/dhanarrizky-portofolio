@@ -228,6 +228,7 @@
                             overflow-y: auto; // Tambahan ini
 
                             .circle-skill {
+                                margin-top: 20px;
                                 height: 150px;
                                 width: 150px;
                                 display: flex;
@@ -248,7 +249,7 @@
                                 @include mobile {
                                     height: 100px;
                                     width: 100px;
-                                    margin-top: 30px;
+                                    // margin-top: 30px;
 
                                     .img-content img {
                                         height: 60px;

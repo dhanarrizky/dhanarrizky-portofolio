@@ -237,19 +237,56 @@ sliderEE.forEach(slider => {
     });
 });
 
-const openDescription = () => {
-    console.log('test');
+function updateHiddenClassBasedOnScreenSize() {
+    const mobileWidth = 768;
+    cardsResume.forEach(card => {
+        const content = card.querySelector('.content-card p');
+        if (content) {
+            if (window.innerWidth <= mobileWidth) {
+                content.classList.add('hidden');
+                content.style.visibility = 'hidden';
+                content.style.maxHeight = '0';
+                content.style.opacity = '0';
+            } else {
+                content.classList.remove('hidden');
+                content.style.visibility = 'visible';
+                content.style.maxHeight = 'none';
+                content.style.opacity = '1';
+            }
+        }
+    });
 }
 
-cardsResume.forEach(c => {
-    c.addEventListener('click', () => {
-        console.log(c.getAttribute('class'))
-    })
+updateHiddenClassBasedOnScreenSize();
+
+window.addEventListener('resize', updateHiddenClassBasedOnScreenSize);
+
+cardsResume.forEach(card => {
+    card.addEventListener('click', () => {
+        const content = card.querySelector('.content-card p');
+        if (content) {
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                content.style.visibility = 'visible';
+                content.style.maxHeight = content.scrollHeight + 'px';
+                setTimeout(() => {
+                    content.style.opacity = '1';
+                }, 10);
+            } else {
+                content.style.maxHeight = '0';
+                setTimeout(() => {
+                    content.style.opacity = '0';
+                    setTimeout(() => {
+                        content.classList.add('hidden');
+                        content.style.visibility = 'hidden';
+                    }, 500);
+                }, 1000);
+            }
+        }
+    });
 });
 
 
-
-// button change mode
 const changeMode = () => {
     const primaryRedColor = "rgb(255, 0, 0)";
     const primaryBlueColor = "rgb(0, 56, 255)";
@@ -260,29 +297,24 @@ const changeMode = () => {
 
     allElements.forEach(element => {
         const styles = getComputedStyle(element);
-
-        // Change color
         if (styles.color === primaryRedColor) {
             element.style.color = primaryBlueColor;
         } else if (styles.color === primaryBlueColor) {
             element.style.color = primaryRedColor;
         }
 
-        // Change border color
         if (styles.borderColor === primaryRedColor) {
             element.style.borderColor = primaryBlueColor;
         } else if (styles.borderColor === primaryBlueColor) {
             element.style.borderColor = primaryRedColor;
         }
 
-        // Change background color
         if (styles.backgroundColor === primaryRedColor) {
             element.style.backgroundColor = primaryBlueColor;
         } else if (styles.backgroundColor === primaryBlueColor) {
             element.style.backgroundColor = primaryRedColor;
         }
 
-        // Change box-shadow color
         if (styles.boxShadow.includes(primaryRedColor)) {
             let newBoxShadow = styles.boxShadow.replace(/rgb\(255, 0, 0\)/g, primaryBlueColor);
             element.style.boxShadow = newBoxShadow;
@@ -291,7 +323,6 @@ const changeMode = () => {
             element.style.boxShadow = newBoxShadow;
         }
 
-        // Change secondary red to secondary blue
         if (styles.color === secondaryRedColor) {
             element.style.color = secondaryBlueColor;
         } else if (styles.color === secondaryBlueColor) {
@@ -328,7 +359,7 @@ const changeMode = () => {
 
 // send email 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah pengiriman formulir secara default
+    event.preventDefault();
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const subject = document.getElementById('subject').value;

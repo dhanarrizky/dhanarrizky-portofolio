@@ -599,6 +599,7 @@ main .container .services .services_detail_skill.active .background-detail-skill
   overflow-y: auto;
 }
 main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill {
+  margin-top: 20px;
   height: 150px;
   width: 150px;
   display: flex;
@@ -618,7 +619,6 @@ main .container .services .services_detail_skill.active .background-detail-skill
   main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill {
     height: 100px;
     width: 100px;
-    margin-top: 30px;
   }
   main .container .services .services_detail_skill.active .background-detail-skill .card-detail-skill .right-content .content .circle-skill .img-content img {
     height: 60px;
@@ -693,9 +693,11 @@ main .container .resume__container .section .line {
   }
 }
 main .container .resume__container .section .card-bg {
+  width: 100%;
   height: 100%;
   display: flex;
   position: relative;
+  transition: all 1s ease-in-out;
 }
 main .container .resume__container .section .card-bg.experience {
   display: none;
@@ -709,6 +711,11 @@ main .container .resume__container .section .card-bg.right {
 @media screen and (max-width: 790px) {
   main .container .resume__container .section .card-bg.right {
     justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 444px) {
+  main .container .resume__container .section .card-bg.left, main .container .resume__container .section .card-bg.right {
+    justify-content: center;
   }
 }
 main .container .resume__container .section .card-bg .pointer {
@@ -771,6 +778,19 @@ main .container .resume__container .section .card-bg .card-education-experience 
   main .container .resume__container .section .card-bg .card-education-experience .top-card {
     flex-wrap: wrap;
   }
+}
+main .container .resume__container .section .card-bg .card-education-experience .content-card p {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px; /* Atur nilai yang cukup besar untuk menampilkan seluruh konten */
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+main .container .resume__container .section .card-bg .card-education-experience .content-card p.hidden {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden; /* Set to hidden after the transition */
+  transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out 1s; /* Delay opacity transition */
 }
 main .container .client {
   padding-top: 120px;

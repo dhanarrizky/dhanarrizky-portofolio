@@ -68,18 +68,20 @@
             }
 
             .card-bg {
+                width: 100%;
                 height: 100%;
                 display: flex;
                 position: relative;
-
+                transition: all 1s ease-in-out;
+            
                 &.experience {
                     display: none;
                 }
-               
+            
                 &.left {
                     justify-content: flex-start;
                 }
-
+            
                 &.right {
                     justify-content: flex-end;
                 }
@@ -89,7 +91,13 @@
                         justify-content: flex-start;
                     }
                 }
-
+            
+                @include mobile {
+                    &.left, &.right {
+                        justify-content: center;
+                    }
+                }
+            
                 .pointer {
                     height: 30px;
                     width: 30px;
@@ -102,16 +110,16 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     z-index: 5; /* Ensure this is higher than the .line z-index */
-
+            
                     @include tablet2 {
                         left: 99%;
                     }
-
+            
                     @include mobile {
                         display: none;
                     }
                 }
-
+            
                 .card-education-experience {
                     width: 45%;
                     padding: 25px;
@@ -121,26 +129,26 @@
                     box-shadow: 0 0 5px $primary-redmode,
                                 0 0 25px $primary-redmode;
                     transition: all 0.5s ease-in-out;
-
+            
                     @include tablet2 {
                         width: 93%;
                     }
-
+            
                     &:hover {
                         transform: translateY(-17px); // Menggunakan translateY untuk naik sedikit
                     }
-
+            
                     .top-card {
                         display: flex;
                         gap: 20px;
                         justify-content: space-between;
                         margin-bottom: 25px;
-
+            
                         .title-card {
                             font-size: 20px;
                             font-weight: bold;
                         }
-
+            
                         .year {
                             background-color: $secondary-redmode;
                             padding: 0 10px;
@@ -148,13 +156,30 @@
                             align-items: center;
                             font-weight: bold;
                         }
-
+            
                         @include tablet2 {
                             flex-wrap: wrap;
                         }
                     }
+            
+                    .content-card p {
+                        visibility: visible;
+                        opacity: 1;
+                        max-height: 500px; /* Atur nilai yang cukup besar untuk menampilkan seluruh konten */
+                        overflow: hidden;
+                        transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+                    }
+                    
+                    .content-card p.hidden {
+                        max-height: 0;
+                        opacity: 0;
+                        visibility: hidden; /* Set to hidden after the transition */
+                        transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out 1s; /* Delay opacity transition */
+                    }                    
+                    
                 }
             }
+            
         }
     }
 }
