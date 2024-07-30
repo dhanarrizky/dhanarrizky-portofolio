@@ -59,10 +59,6 @@
                 z-index: 4;
 
                 @include tablet2 {
-                    left: 95%;
-                }
-
-                @include mobile {
                     display: none;
                 }
             }
@@ -112,10 +108,7 @@
                     z-index: 5; /* Ensure this is higher than the .line z-index */
             
                     @include tablet2 {
-                        left: 99%;
-                    }
-            
-                    @include mobile {
+                        // left: 99%;
                         display: none;
                     }
                 }

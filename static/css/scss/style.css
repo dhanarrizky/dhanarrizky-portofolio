@@ -684,11 +684,6 @@ main .container .resume__container .section .line {
 }
 @media screen and (max-width: 790px) {
   main .container .resume__container .section .line {
-    left: 95%;
-  }
-}
-@media screen and (max-width: 444px) {
-  main .container .resume__container .section .line {
     display: none;
   }
 }
@@ -731,11 +726,6 @@ main .container .resume__container .section .card-bg .pointer {
   z-index: 5; /* Ensure this is higher than the .line z-index */
 }
 @media screen and (max-width: 790px) {
-  main .container .resume__container .section .card-bg .pointer {
-    left: 99%;
-  }
-}
-@media screen and (max-width: 444px) {
   main .container .resume__container .section .card-bg .pointer {
     display: none;
   }
